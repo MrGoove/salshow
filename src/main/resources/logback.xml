@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 我们在项目中经常会使用到日志，所以这里还有配置日志xml -->
+<configuration debug="true">
+    <appender name="STDOUT" class="h.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss:SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debut">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
