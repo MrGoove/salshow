@@ -39,11 +39,11 @@
 			<li class="login" >
 						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
-						        <form id="loginForm">
+						        <form id="loginForm" action="${pageContext.request.contextPath}/login/login" method="POST">
 						                <fieldset id="body">
 						                	<fieldset>
 						                          <label for="email">Email Address</label>
-						                          <input type="text" name="email" id="email">
+						                          <input type="text" name="email2" id="email2">
 						                    </fieldset>
 						                    <fieldset>
 						                            <label for="password">Password</label>
