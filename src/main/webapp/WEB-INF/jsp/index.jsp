@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Shoppe Bootstarp Website Template | Home :: 小贝壳网站模板</title>
+<title>salshow main page</title>
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="${pageContext.request.contextPath}/resources/js/jquery-1.11.1.min.js"></script>
@@ -796,7 +796,7 @@
 		</div>
 		<div class="col-md-3 sidebar">
 		<div class="grid_list">
-			<a href="${pageContext.request.contextPath}/getDetail"> 
+			<a href="${pageContext.request.contextPath}/details"> 
 				<div class="grid_img"> 
 					<img src="${pageContext.request.contextPath}/resources/images/grid_pic1.jpg" class="img-responsive" alt=""/>
 				</div>
@@ -808,7 +808,7 @@
 			</a>	
 			</div>	
 		<div class="grid_list">
-			<a href="${pageContext.request.contextPath}/getDetail"> 
+			<a href="${pageContext.request.contextPath}/details"> 
 				<div class="grid_text-middle">
 					<h3><a href="#">celina unpluged</a></h3>
 					<p>on select merchandise</p>
@@ -820,7 +820,7 @@
 			  </a>
 			</div>				
 		<div class="grid_list"> 
-			<a href="${pageContext.request.contextPath}/getDetail">
+			<a href="${pageContext.request.contextPath}/details">
 				<div class="grid_img"> 
 					<img src="${pageContext.request.contextPath}/resources/images/grid_pic3.jpg" class="img-responsive" alt=""/>
 				</div>
@@ -844,7 +844,7 @@
 		<!-- grids_of_3 -->
 		<div class="row grids">
 			<div class="col-md-3 grid1">
-			  <a href="${pageContext.request.contextPath}/getDetail">
+			  <a href="${pageContext.request.contextPath}/details">
 				<img src="images/pic1.jpg" class="img-responsive" alt=""/>
 				<div class="look">			
 					<h4>get scraves</h4>
@@ -852,7 +852,7 @@
 				</div></a>
 			</div>
 			<div class="col-md-3 grid1">
-			  <a href="${pageContext.request.contextPath}/getDetail">
+			  <a href="${pageContext.request.contextPath}/details">
 				<img src="images/pic2.jpg" class="img-responsive" alt=""/>
 				<div class="look">			
 					<h4>Fashion Tips</h4>
@@ -860,7 +860,7 @@
 				</div></a>
 			</div>
 			<div class="col-md-3 grid1">
-			  <a href="${pageContext.request.contextPath}/getDetail">
+			  <a href="${pageContext.request.contextPath}/details">
 				<img src="images/pic3.jpg" class="img-responsive" alt=""/>
 				<div class="look">			
 					<h4>Crop Levis</h4>
@@ -868,7 +868,7 @@
 				</div></a>
 			</div>
 			<div class="col-md-3 grid1">
-			  <a href="${pageContext.request.contextPath}/getDetail">
+			  <a href="${pageContext.request.contextPath}/details">
 				<img src="images/pic4.jpg" class="img-responsive" alt=""/>
 				<div class="look">			
 					<h4>get scraves</h4>

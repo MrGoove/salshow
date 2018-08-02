@@ -89,7 +89,7 @@
 <div class="container">
 	<div class="header">
 		<div class="logo">
-			<a href="index.jsp"><img src="images/logo.png" alt=""/> </a>
+			<a href="${pageContext.request.contextPath}/index"><img src="images/logo.png" alt=""/> </a>
 		</div>
 		<!-- start header_right -->
 		<div class="header_right">
@@ -797,21 +797,21 @@
 						<ul id="etalage">
 							<li>
 								<a href="optionallink.html">
-									<img class="${pageContext.request.contextPath}/resources/etalage_thumb_image" src="images/d1.jpg" class="img-responsive" />
-									<img class="${pageContext.request.contextPath}/resources/etalage_source_image" src="images/d1.jpg" class="img-responsive" title="" />
+									<img class="etalage_thumb_image" src="${pageContext.request.contextPath}/resources/images/d1.jpg" class="img-responsive" />
+									<img class="etalage_source_image" src="${pageContext.request.contextPath}/resources/images/d1.jpg" class="img-responsive" title="" />
 								</a>
 							</li>
 							<li>
-								<img class="${pageContext.request.contextPath}/resources/etalage_thumb_image" src="images/d2.jpg" class="img-responsive" />
-								<img class="${pageContext.request.contextPath}/resources/etalage_source_image" src="images/d2.jpg" class="img-responsive" title="" />
+								<img class="etalage_thumb_image" src="${pageContext.request.contextPath}/resources/images/d2.jpg" class="img-responsive" />
+								<img class="etalage_source_image" src="${pageContext.request.contextPath}/resources/images/d2.jpg" class="img-responsive" title="" />
 							</li>
 							<li>
-								<img class="${pageContext.request.contextPath}/resources/etalage_thumb_image" src="images/d3.jpg" class="img-responsive"  />
-								<img class="${pageContext.request.contextPath}/resources/etalage_source_image" src="images/d3.jpg"class="img-responsive"  />
+								<img class="etalage_thumb_image" src="${pageContext.request.contextPath}/resources/images/d3.jpg" class="img-responsive"  />
+								<img class="etalage_source_image" src="${pageContext.request.contextPath}/resources/images/d3.jpg"class="img-responsive"  />
 							</li>
 						    <li>
-								<img class="${pageContext.request.contextPath}/resources/etalage_thumb_image" src="images/d4.jpg" class="img-responsive"  />
-								<img class="${pageContext.request.contextPath}/resources/etalage_source_image" src="images/d4.jpg"class="img-responsive"  />
+								<img class="etalage_thumb_image" src="${pageContext.request.contextPath}/resources/images/d4.jpg" class="img-responsive"  />
+								<img class="etalage_source_image" src="${pageContext.request.contextPath}/resources/images/d4.jpg"class="img-responsive"  />
 							</li>
 						</ul>
 						 <div class="clearfix"></div>		
@@ -822,10 +822,10 @@
 					<div class="det_nav">
 						<h4>related styles :</h4>
 						<ul>
-							<li><a href="#"><img src="images/w6.jpg" class="img-responsive" alt=""/></a></li>
-							<li><a href="#"><img src="images/w8.jpg" class="img-responsive" alt=""/></a></li>
-							<li><a href="#"><img src="images/w4.jpg" class="img-responsive" alt=""/></a></li>
-							<li><a href="#"><img src="images/w9.jpg" class="img-responsive" alt=""/></a></li>
+							<li><a href="#"><img src="${pageContext.request.contextPath}/resources/images/w6.jpg" class="img-responsive" alt=""/></a></li>
+							<li><a href="#"><img src="${pageContext.request.contextPath}/resources/images/w8.jpg" class="img-responsive" alt=""/></a></li>
+							<li><a href="#"><img src="${pageContext.request.contextPath}/resources/images/w4.jpg" class="img-responsive" alt=""/></a></li>
+							<li><a href="#"><img src="${pageContext.request.contextPath}/resources/images/w9.jpg" class="img-responsive" alt=""/></a></li>
 						</ul>
 					</div>
 					<div class="det_nav1">

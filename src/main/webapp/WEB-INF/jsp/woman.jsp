@@ -892,7 +892,7 @@
             <!-- grids_of_4 -->
             <div class="grids_of_4">
                 <div class="grid1_of_4">
-                    <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+                    <div class="content_box"><a href="${pageContext.request.contextPath}/details">
                         <div class="view view-fifth">
                             <img src="${pageContext.request.contextPath}/resources/images/w1.jpg" class="img-responsive" alt=""/>
                             <div class="mask">
@@ -900,13 +900,13 @@
                             </div>
                     </a>
                     </div>
-                    <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+                    <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
                     <p>It is a long established fact that a reader</p>
                     Rs. 499
                 </div>
             </div>
             <div class="grid1_of_4">
-                <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+                <div class="content_box"><a href="${pageContext.request.contextPath}/details">
                     <div class="view view-fifth">
                         <img src="${pageContext.request.contextPath}/resources/images/w2.jpg" class="img-responsive" alt=""/>
                         <div class="mask">
@@ -914,13 +914,13 @@
                         </div>
                 </a>
                 </div>
-                <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+                <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
                 <p>It is a long established fact that a reader</p>
                 Rs. 499
             </div>
         </div>
         <div class="grid1_of_4">
-            <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+            <div class="content_box"><a href="${pageContext.request.contextPath}/details">
                 <div class="view view-fifth">
                     <img src="${pageContext.request.contextPath}/resources/images/w3.jpg" class="img-responsive" alt=""/>
                     <div class="mask">
@@ -928,13 +928,13 @@
                     </div>
             </a>
             </div>
-            <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+            <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
             <p>It is a long established fact that a reader</p>
             Rs. 499
         </div>
     </div>
     <div class="grid1_of_4">
-        <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+        <div class="content_box"><a href="${pageContext.request.contextPath}/details">
             <div class="view view-fifth">
                 <img src="${pageContext.request.contextPath}/resources/images/w4.jpg" class="img-responsive" alt=""/>
                 <div class="mask">
@@ -942,7 +942,7 @@
                 </div>
         </a>
         </div>
-        <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+        <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
         <p>It is a long established fact that a reader</p>
         Rs. 499
     </div>
@@ -953,7 +953,7 @@
 
 <div class="grids_of_4">
     <div class="grid1_of_4">
-        <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+        <div class="content_box"><a href="${pageContext.request.contextPath}/details">
             <div class="view view-fifth">
                 <img src="${pageContext.request.contextPath}/resources/images/w5.jpg" class="img-responsive" alt=""/>
                 <div class="mask">
@@ -961,13 +961,13 @@
                 </div>
         </a>
         </div>
-        <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+        <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
         <p>It is a long established fact that a reader</p>
         Rs. 499
     </div>
 </div>
 <div class="grid1_of_4">
-    <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+    <div class="content_box"><a href="${pageContext.request.contextPath}/details">
         <div class="view view-fifth">
             <img src="${pageContext.request.contextPath}/resources/images/w6.jpg" class="img-responsive" alt=""/>
             <div class="mask">
@@ -975,13 +975,13 @@
             </div>
     </a>
     </div>
-    <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+    <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
     <p>It is a long established fact that a reader</p>
     Rs. 499
 </div>
 </div>
 <div class="grid1_of_4">
-    <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+    <div class="content_box"><a href="${pageContext.request.contextPath}/details">
         <div class="view view-fifth">
             <img src="${pageContext.request.contextPath}/resources/images/w7.jpg" class="img-responsive" alt=""/>
             <div class="mask">
@@ -989,13 +989,13 @@
             </div>
     </a>
     </div>
-    <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+    <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
     <p>It is a long established fact that a reader</p>
     Rs. 499
 </div>
 </div>
 <div class="grid1_of_4">
-    <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+    <div class="content_box"><a href="${pageContext.request.contextPath}/details">
         <div class="view view-fifth">
             <img src="${pageContext.request.contextPath}/resources/images/w8.jpg" class="img-responsive" alt=""/>
             <div class="mask">
@@ -1003,7 +1003,7 @@
             </div>
     </a>
     </div>
-    <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+    <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
     <p>It is a long established fact that a reader</p>
     Rs. 499
 </div>
@@ -1014,7 +1014,7 @@
 
 <div class="grids_of_4">
     <div class="grid1_of_4">
-        <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+        <div class="content_box"><a href="${pageContext.request.contextPath}/details">
             <div class="view view-fifth">
                 <img src="${pageContext.request.contextPath}/resources/images/w9.jpg" class="img-responsive" alt=""/>
                 <div class="mask">
@@ -1022,13 +1022,13 @@
                 </div>
         </a>
         </div>
-        <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+        <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
         <p>It is a long established fact that a reader</p>
         Rs. 499
     </div>
 </div>
 <div class="grid1_of_4">
-    <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+    <div class="content_box"><a href="${pageContext.request.contextPath}/details">
         <div class="view view-fifth">
             <img src="${pageContext.request.contextPath}/resources/images/w10.jpg" class="img-responsive" alt=""/>
             <div class="mask">
@@ -1036,13 +1036,13 @@
             </div>
     </a>
     </div>
-    <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+    <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
     <p>It is a long established fact that a reader</p>
     Rs. 499
 </div>
 </div>
 <div class="grid1_of_4">
-    <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+    <div class="content_box"><a href="${pageContext.request.contextPath}/details">
         <div class="view view-fifth">
             <img src="${pageContext.request.contextPath}/resources/images/w11.jpg" class="img-responsive" alt=""/>
             <div class="mask">
@@ -1050,13 +1050,13 @@
             </div>
     </a>
     </div>
-    <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+    <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
     <p>It is a long established fact that a reader</p>
     Rs. 499
 </div>
 </div>
 <div class="grid1_of_4">
-    <div class="content_box"><a href="${pageContext.request.contextPath}/getDetail">
+    <div class="content_box"><a href="${pageContext.request.contextPath}/details">
         <div class="view view-fifth">
             <img src="${pageContext.request.contextPath}/resources/images/w12.jpg" class="img-responsive" alt=""/>
             <div class="mask">
@@ -1064,7 +1064,7 @@
             </div>
     </a>
     </div>
-    <h4><a href="${pageContext.request.contextPath}/getDetail"> Duis autem</a></h4>
+    <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
     <p>It is a long established fact that a reader</p>
     Rs. 499
 </div>
