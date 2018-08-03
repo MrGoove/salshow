@@ -60,6 +60,4 @@ public class UserController {
         httpSession.setAttribute("UserName",user.FName+user.LName);
         return "index";
     }
-
-
 }

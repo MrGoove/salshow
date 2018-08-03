@@ -814,7 +814,7 @@
 						<ul id="etalage">
 							<li>
 								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="${pageContext.request.contextPath}/resources/images/d1.jpg" class="img-responsive" />
+									<img class="etalage_thumb_image" src="${goods.photomain}" class="img-responsive" />
 									<img class="etalage_source_image" src="${pageContext.request.contextPath}/resources/images/d1.jpg" class="img-responsive" title="" />
 								</a>
 							</li>
@@ -834,8 +834,8 @@
 						 <div class="clearfix"></div>		
 				  </div>
 				  <div class="desc1 span_3_of_2">
-					<h3>soluta nobis eleifend option</h3>
-					<p>Rs. 999 <a href="#">click for offer</a></p>
+					<h3>${goods.goodsname}</h3>
+					<p>${goods.price}<a href="#">click for offer</a></p>
 					<div class="det_nav">
 						<h4>related styles :</h4>
 						<ul>
@@ -866,7 +866,7 @@
           	   </div>
           	    <div class="single-bottom1">
 					<h6>Details</h6>
-					<p class="prod-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option</p>
+					<p class="prod-desc">${goods.descriptionbrief}</p>
 				</div>
 				<div class="single-bottom2">
 					<h6>Related Products</h6>

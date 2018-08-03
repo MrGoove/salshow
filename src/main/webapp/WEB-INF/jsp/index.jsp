@@ -126,7 +126,7 @@
 							<div class="h_nav">
 								<h4>shop</h4>
 								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
+									<li><a href="${pageContext.request.contextPath}/goods/goods">new arrivals</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>

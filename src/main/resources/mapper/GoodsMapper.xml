@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.salshow.dao.GoodsDao">
+    <select id="getGoods" resultType="Goods" parameterType="String">
+        SELECT id,goods_name as goodsname,photo_main as photomain,photo_1 as photo1,
+        photo_2 as photo2,photo_3 as photo3,photo_4 as photo4,photo_5 as photo5,photo_6 as photo6,
+        description_brief as descriptionbrief,description_details as descriptiondetails,price,sizes,
+        catogory,style,brand,color,discount
+        FROM tb_goods WHERE goods_name = #{goods_name}
+    </select>
+    <select id="getGoodsList" resultType="Goods">
+        select * FROM tb_goods
+    </select>
+</mapper>
