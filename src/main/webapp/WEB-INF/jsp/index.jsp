@@ -43,7 +43,7 @@
 			<li><a href="#">${sessionScope.UserName},welcome</a></li>|
 			<li class="login" >
 					<div id="loginout">
-						<form id="logoutForm" action="${pageContext.request.contextPath}/login/logout" method="POST">
+						<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
 							<fieldset id="outbody">
 								<input type="submit" id="logout" value="log out">
 							</fieldset>
@@ -55,7 +55,7 @@
 			<li class="login" >
 						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
-						        <form id="loginForm" action="${pageContext.request.contextPath}/login/login" method="POST">
+						        <form id="loginForm" action="${pageContext.request.contextPath}/User/login" method="POST">
 						                <fieldset id="body">
 						                	<fieldset>
 						                          <label for="email">Email Address</label>

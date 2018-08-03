@@ -15,7 +15,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/User")
 public class UserController {
 
     @Autowired
@@ -44,6 +44,20 @@ public class UserController {
     @RequestMapping("/logout")
     public String logout(HttpSession httpSession){
         httpSession.removeAttribute("UserName");
+        return "index";
+    }
+
+    @RequestMapping(value = "/regist",method = RequestMethod.POST)
+    public String regist(ServletRequest request,HttpSession httpSession){
+        User user = new User();
+        user.FName = request.getParameter("FName");
+        user.LName = request.getParameter("LName");
+        user.Email = request.getParameter("Email");
+        user.password = request.getParameter("password");
+        user.address = request.getParameter("Address");
+        user.buyamount =0;
+        userDao.SaveUser(user);
+        httpSession.setAttribute("UserName",user.FName+user.LName);
         return "index";
     }
 

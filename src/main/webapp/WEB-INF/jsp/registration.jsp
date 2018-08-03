@@ -31,29 +31,46 @@
 		<ul>
 			<li><a href="#">Recently viewed</a></li>|
 			<li><a href="contact.html">Contact</a></li>|
+				<%
+				String userName = (String)session.getAttribute("UserName");
+			if(userName != null){
+			%>
+			<li><a href="#">${sessionScope.UserName},welcome</a></li>|
 			<li class="login" >
-						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
-						    <div id="loginBox">                
-						        <form id="loginForm">
-						                <fieldset id="body">
-						                	<fieldset>
-						                          <label for="email">Email Address</label>
-						                          <input type="text" name="email" id="email">
-						                    </fieldset>
-						                    <fieldset>
-						                            <label for="password">Password</label>
-						                            <input type="password" name="password" id="password">
-						                     </fieldset>
-						                    <input type="submit" id="login" value="Sign in">
-						                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-						            	</fieldset>
-						            <span><a href="#">Forgot your password?</a></span>
-							 </form>
-				        </div>
-			      </div>
-			</li>
-		</ul>
+				<div id="loginout">
+					<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
+						<fieldset id="outbody">
+							<input type="submit" id="logout" value="log out">
+						</fieldset>
+					</form>
+				</div>
 	</div>
+	</li>
+	<%} else{%>
+	<li class="login" >
+		<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+			<div id="loginBox">
+				<form id="loginForm" action="${pageContext.request.contextPath}/User/login" method="POST">
+					<fieldset id="body">
+						<fieldset>
+							<label for="email">Email Address</label>
+							<input type="text" name="email2" id="email2">
+						</fieldset>
+						<fieldset>
+							<label for="password">Password</label>
+							<input type="password" name="password" id="password">
+						</fieldset>
+						<input type="submit" id="login" value="Sign in">
+						<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+					</fieldset>
+					<span><a href="#">Forgot your password?</a></span>
+				</form>
+			</div>
+		</div>
+	</li>
+	<%}%>
+	</ul>
+</div>
 	<div class="clearfix"></div>
 </div>
 </div>
@@ -767,7 +784,7 @@
 	<div class="registration">
 		<div class="registration_left">
 		<h2>new user? <span> create a shoppe account </span></h2>
-		<a href="#"><div class="reg_fb"><img src="images/facebook.png" alt=""><i>register using Facebook</i><div class="clearfix"></div></div></a>
+		<a href="#"><div class="reg_fb"><img src="${pageContext.request.contextPath}/resources/images/facebook.png" alt=""><i>register using Facebook</i><div class="clearfix"></div></div></a>
 		<!-- [if IE] 
 		    < link rel='stylesheet' type='text/css' href='ie.css'/>  
 		 [endif] -->  
@@ -815,20 +832,25 @@
 		</script>
 		 <div class="registration_form">
 		 <!-- Form -->
-			<form id="registration_form" action="contact.php" method="post">
+			<form id="registration_form" action="${pageContext.request.contextPath}/User/regist" method="post">
 				<div>
 					<label>
-						<input placeholder="first name:" type="text" tabindex="1" required autofocus>
+						<input name="FName" placeholder="first name:" type="text" tabindex="1" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="last name:" type="text" tabindex="2" required autofocus>
+						<input name="LName" placeholder="last name:" type="text" tabindex="2" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="email address:" type="email" tabindex="3" required>
+						<input name="Email" placeholder="email address:" type="email" tabindex="3" required>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input name="Address" placeholder="address:" type="text" tabindex="4" required>
 					</label>
 				</div>
 				<div class="sky-form">
@@ -842,12 +864,12 @@
 				</div>
 				<div>
 					<label>
-						<input placeholder="password" type="password" tabindex="4" required>
+						<input name="password" placeholder="password" type="password" tabindex="5" required>
 					</label>
 				</div>						
 				<div>
 					<label>
-						<input placeholder="retype password" type="password" tabindex="4" required>
+						<input placeholder="retype password" type="password" tabindex="5" required>
 					</label>
 				</div>	
 				<div>
@@ -865,7 +887,7 @@
 		<a href="#"><div class="reg_fb"><img src="images/facebook.png" alt=""><i>sign in using Facebook</i><div class="clear"></div></div></a>
 		 <div class="registration_form">
 		 <!-- Form -->
-			<form id="registration_form" action="contact.php" method="post">
+			<form id="registration_form" action="${pageContext.request.contextPath}/User/regist" method="post">
 				<div>
 					<label>
 						<input placeholder="email:" type="email" tabindex="3" required>

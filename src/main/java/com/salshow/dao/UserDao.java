@@ -4,4 +4,5 @@ import com.salshow.entity.User;
 
 public interface UserDao {
     User queryUser(String Email);
+    int SaveUser(User user);
 }
