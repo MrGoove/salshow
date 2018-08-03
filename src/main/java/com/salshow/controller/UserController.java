@@ -1,5 +1,6 @@
 package com.salshow.controller;
 
+import com.mysql.cj.Session;
 import com.salshow.dao.UserDao;
 import com.salshow.entity.User;
 import com.sun.deploy.net.HttpResponse;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/login")
@@ -20,14 +22,15 @@ public class UserController {
     private UserDao userDao;
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(ServletRequest httpRequest, ServletResponse httpresponse){
+    public String login(ServletRequest httpRequest, ServletResponse httpresponse,HttpSession httpSession){
         String email = httpRequest.getParameter("email2");
         String password = httpRequest.getParameter("password");
         User user = userDao.queryUser(email);
         if(user != null){
 
-            if(!user.password.equals(password)){
-                return "mainPage";
+            if(user.password.equals(password)){
+                httpSession.setAttribute("UserName",user.FName+user.LName);
+                return "index";
             }
             else{
                 return "woman";
@@ -36,6 +39,12 @@ public class UserController {
         else{
             return "details";
         }
+    }
+
+    @RequestMapping("/logout")
+    public String logout(HttpSession httpSession){
+        httpSession.removeAttribute("UserName");
+        return "index";
     }
 
 

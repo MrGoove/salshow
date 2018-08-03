@@ -1,4 +1,4 @@
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -122,7 +122,7 @@
 		</div>
 		<!-- start header menu -->
 		<ul class="megamenu skyblue">
-			<li><a class="color1" href="index.jsp">Home</a></li>
+			<li><a class="color1" href="${pageContext.request.contextPath}/index">Home</a></li>
 			<li class="grid"><a class="color2" href="#">new arrivals</a>
 				<div class="megapanel">
 					<div class="row">

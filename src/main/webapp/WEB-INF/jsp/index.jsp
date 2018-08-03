@@ -1,4 +1,4 @@
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,6 +36,22 @@
 		<ul>
 			<li><a href="#">Recently viewed</a></li>|
 			<li><a href="contact.html">Contact</a></li>|
+			<%
+				String userName = (String)session.getAttribute("UserName");
+			if(userName != null){
+			%>
+			<li><a href="#">${sessionScope.UserName},welcome</a></li>|
+			<li class="login" >
+					<div id="loginout">
+						<form id="logoutForm" action="${pageContext.request.contextPath}/login/logout" method="POST">
+							<fieldset id="outbody">
+								<input type="submit" id="logout" value="log out">
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</li>
+			<%} else{%>
 			<li class="login" >
 						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
@@ -57,6 +73,7 @@
 				        </div>
 			      </div>
 			</li>
+			<%}%>
 		</ul>
 	</div>
 	<div class="clearfix"> </div>
@@ -68,12 +85,12 @@
 <div class="container">
 	<div class="header">
 		<div class="logo">
-			<a href="${pageContext.request.contextPath}/index"><img src="images/logo.png" alt=""/> </a>
+			<a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
 		</div>
 		<!-- start header_right -->
 		<div class="header_right">
 		<div class="create_btn">
-			<a class="arrow"  href="${pageContext.request.contextPath}/registration">create account <img src="images/right_arrow.png" alt=""/>  </a>
+			<a class="arrow"  href="${pageContext.request.contextPath}/registration">create account <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
 		</div>
 		<ul class="icon1 sub-icon1 profile_img">
 			<li><a class="active-icon c2" href="#"> </a>
@@ -839,7 +856,6 @@
 		<div class="content_text">
 			<h3>brand of the week</h3>
 			<h4><a href="#">a touch of glamour </a></h4>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
 		</div>
 		<!-- grids_of_3 -->
 		<div class="row grids">
