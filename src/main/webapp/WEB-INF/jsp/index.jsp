@@ -861,7 +861,7 @@
 		<div class="row grids">
 			<div class="col-md-3 grid1">
 			  <a href="${pageContext.request.contextPath}/details">
-				<img src="images/pic1.jpg" class="img-responsive" alt=""/>
+				<img src="${pageContext.request.contextPath}/resources/images/pic1.jpg" class="img-responsive" alt=""/>
 				<div class="look">			
 					<h4>get scraves</h4>
 					<p>read more</p>
@@ -869,7 +869,7 @@
 			</div>
 			<div class="col-md-3 grid1">
 			  <a href="${pageContext.request.contextPath}/details">
-				<img src="images/pic2.jpg" class="img-responsive" alt=""/>
+				<img src="${pageContext.request.contextPath}/resources/images/pic2.jpg" class="img-responsive" alt=""/>
 				<div class="look">			
 					<h4>Fashion Tips</h4>
 					<p>read more</p>
@@ -877,7 +877,7 @@
 			</div>
 			<div class="col-md-3 grid1">
 			  <a href="${pageContext.request.contextPath}/details">
-				<img src="images/pic3.jpg" class="img-responsive" alt=""/>
+				<img src="${pageContext.request.contextPath}/resources/images/pic3.jpg" class="img-responsive" alt=""/>
 				<div class="look">			
 					<h4>Crop Levis</h4>
 					<p>read more</p>
@@ -885,7 +885,7 @@
 			</div>
 			<div class="col-md-3 grid1">
 			  <a href="${pageContext.request.contextPath}/details">
-				<img src="images/pic4.jpg" class="img-responsive" alt=""/>
+				<img src="${pageContext.request.contextPath}/resources/images/pic4.jpg" class="img-responsive" alt=""/>
 				<div class="look">			
 					<h4>get scraves</h4>
 					<p>read more</p>

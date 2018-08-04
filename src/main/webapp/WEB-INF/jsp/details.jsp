@@ -857,7 +857,7 @@
 							</div>
 					</div>
 					<div class="btn_form">
-						<a href="buy.jsp">buy</a>
+						<a href="${pageContext.request.contextPath}/buy">buy</a>
 					</div>
 					<a href="#"><span>login to save in wishlist </span></a>
 					
