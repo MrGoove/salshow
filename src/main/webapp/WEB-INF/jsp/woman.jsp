@@ -1,6 +1,4 @@
-<%
-
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -16,7 +14,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- start menu -->
     <link href="${pageContext.request.contextPath}/resources/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-    <script type="text/javascript" src="js/megamenu.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/megamenu.js"></script>
     <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
     <script src="${pageContext.request.contextPath}/resources/js/menu_jquery.js"></script>
     <!-- the jScrollPane script -->
@@ -89,7 +87,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <a href="${pageContext.request.contextPath}/index"><img src="images/logo.png" alt=""/> </a>
+                <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
             </div>
             <!-- start header_right -->
             <div class="header_right">
@@ -897,7 +895,7 @@
         <!-- start content -->
         <div class="col-md-9 w_content">
             <div class="women">
-                <a href="#"><h4>Enthecwear - <span>4449 itemms</span> </h4></a>
+                <a href="#"><h4>Enthecwear - <span>${goodsList.size()==0?0:goodsList.size()}  items found</span> </h4></a>
                 <ul class="w_nav">
                     <li>Sort : </li>
                     <li><a class="active" href="#">popular</a></li> |
@@ -908,7 +906,7 @@
                 </ul>
                 <div class="clearfix"></div>
             </div>
-            <!-- grids_of_4 -->
+            <%--<!-- grids_of_4 -->
             <div class="grids_of_4">
                 <div class="grid1_of_4">
                     <div class="content_box"><a href="${pageContext.request.contextPath}/details">
@@ -1073,23 +1071,28 @@
     <p>It is a long established fact that a reader</p>
     Rs. 499
 </div>
-</div>
-<div class="grid1_of_4">
-    <div class="content_box"><a href="${pageContext.request.contextPath}/details">
-        <div class="view view-fifth">
-            <img src="${pageContext.request.contextPath}/resources/images/w12.jpg" class="img-responsive" alt=""/>
-            <div class="mask">
-                <div class="info">Quick View</div>
+</div>--%>
+
+            <c:forEach items="${goodsList}" var="g">
+            <div class="grid1_of_4">
+                <div class="content_box"><a href="${pageContext.request.contextPath}/goods/goods?goodsName=${g.goodsname}">
+                    <div class="view view-fifth">
+                        <img src="${pageContext.request.contextPath}${g.photomain}" class="img-responsive" alt=""/>
+                        <div class="mask">
+                            <div class="info">Quick View</div>
+                        </div>
+                </div>
+                <h4><a href="${pageContext.request.contextPath}/details">${g.goodsname}</a></h4>
+                <p>${g.descriptionbrief}</p>
+                Rmb ${g.price}
             </div>
-    </a>
+        </div>
+        <div class="clearfix"></div>
     </div>
-    <h4><a href="${pageContext.request.contextPath}/details"> Duis autem</a></h4>
-    <p>It is a long established fact that a reader</p>
-    Rs. 499
-</div>
-</div>
-<div class="clearfix"></div>
-</div>
+
+            </c:forEach>
+
+
 <!-- end grids_of_4 -->
 
 

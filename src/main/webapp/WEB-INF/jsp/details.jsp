@@ -106,7 +106,7 @@
 <div class="container">
 	<div class="header">
 		<div class="logo">
-			<a href="${pageContext.request.contextPath}/index"><img src="images/logo.png" alt=""/> </a>
+			<a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
 		</div>
 		<!-- start header_right -->
 		<div class="header_right">
