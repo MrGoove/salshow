@@ -30,6 +30,7 @@ public class GoodsController {
     @RequestMapping("/goodsList")
     public String getGoodsList(Model model){
         List<Goods> goodsList = goodsService.getGoodsList();
+        goodsList.remove(1);
         model.addAttribute("goodsList",goodsList);
         return "woman";
     }

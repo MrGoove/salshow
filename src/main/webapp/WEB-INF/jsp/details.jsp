@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -147,78 +148,43 @@
 							<div class="h_nav">
 								<h4>shop</h4>
 								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
+									<li><a href="${pageContext.request.contextPath}/goods/goods">new arrivals</a></li>
+									<li><a href="${pageContext.request.contextPath}/goods/goodsList">men</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-								</ul>	
+								</ul>
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>help</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>												
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>account</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">login</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create an account</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">my shopping bag</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-								</ul>	
+
 							</div>						
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>popular</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 					</div>
@@ -237,79 +203,37 @@
 						<div class="col1">
 							<div class="h_nav">
 								<h4>shop</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>help</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>												
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>account</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">login</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create an account</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">my shopping bag</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-								</ul>	
+
 							</div>						
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>popular</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 					</div>
@@ -328,79 +252,37 @@
 						<div class="col1">
 							<div class="h_nav">
 								<h4>shop</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>help</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>												
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>account</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">login</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create an account</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">my shopping bag</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-								</ul>	
+
 							</div>						
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>popular</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 					</div>
@@ -419,79 +301,37 @@
 						<div class="col1">
 							<div class="h_nav">
 								<h4>shop</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>help</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>												
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>account</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">login</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create an account</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">my shopping bag</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-								</ul>	
+
 							</div>						
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>popular</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 					</div>
@@ -510,79 +350,37 @@
 						<div class="col1">
 							<div class="h_nav">
 								<h4>shop</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>help</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>												
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>account</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">login</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create an account</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">my shopping bag</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-								</ul>	
-							</div>						
+
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>popular</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 					</div>
@@ -601,79 +399,37 @@
 						<div class="col1">
 							<div class="h_nav">
 								<h4>shop</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>help</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>												
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>account</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">login</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create an account</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">my shopping bag</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-								</ul>	
+
 							</div>						
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>popular</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 					</div>
@@ -692,79 +448,37 @@
 						<div class="col1">
 							<div class="h_nav">
 								<h4>shop</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>help</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>							
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>												
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>account</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">login</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create an account</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">my shopping bag</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">create wishlist</a></li>
-								</ul>	
+
 							</div>						
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>my company</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">trends</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">sale</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
 								<h4>popular</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">style videos</a></li>
-								</ul>	
+
 							</div>
 						</div>
 					</div>
@@ -812,7 +526,7 @@
 				  <div class="single_left">
 					<div class="grid images_3_of_2">
 						<ul id="etalage">
-							<li>
+							<%--<li>
 								<a href="optionallink.html">
 									<img class="etalage_thumb_image" src="${goods.photomain}" class="img-responsive" />
 									<img class="etalage_source_image" src="${pageContext.request.contextPath}/resources/images/d1.jpg" class="img-responsive" title="" />
@@ -830,8 +544,23 @@
 								<img class="etalage_thumb_image" src="${pageContext.request.contextPath}/resources/images/d4.jpg" class="img-responsive"  />
 								<img class="etalage_source_image" src="${pageContext.request.contextPath}/resources/images/d4.jpg"class="img-responsive"  />
 							</li>
+						</ul>--%>
+
+						<li>
+						<a href="optionallink.html">
+						<img class="etalage_thumb_image" src="${pageContext.request.contextPath}${goods.photo1}" class="img-responsive"/>
+							<img class="etalage_source_image" src="${pageContext.request.contextPath}${goods.photo1}"class="img-responsive"  />
+							</a>
+						</li>
+								<li><img class="etalage_thumb_image" src="${pageContext.request.contextPath}${goods.photo2}" class="img-responsive" />
+									<img class="etalage_source_image" src="${pageContext.request.contextPath}${goods.photo2}"class="img-responsive"  />
+								</li><li><img class="etalage_thumb_image" src="${pageContext.request.contextPath}${goods.photo3}" class="img-responsive"/>
+								<img class="etalage_source_image" src="${pageContext.request.contextPath}${goods.photo3}"class="img-responsive"  />
+							</li><li><img class="etalage_thumb_image" src="${pageContext.request.contextPath}${goods.photo4}" class="img-responsive"/>
+								<img class="etalage_source_image" src="${pageContext.request.contextPath}${goods.photo4	}"class="img-responsive"  />
+							</li>
 						</ul>
-						 <div class="clearfix"></div>		
+
 				  </div>
 				  <div class="desc1 span_3_of_2">
 					<h3>${goods.goodsname}</h3>
@@ -860,7 +589,7 @@
 						<a href="${pageContext.request.contextPath}/buy">buy</a>
 					</div>
 					<a href="#"><span>login to save in wishlist </span></a>
-					
+
 			   	 </div>
           	    <div class="clearfix"></div>
           	   </div>
@@ -877,12 +606,12 @@
 		                       </div>
 		                       <div class="prod1-desc">
 		                           <h5><a class="product_link" href="#">Excepteur sint</a></h5>
-		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>									
+		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
 							   </div>
 							  <div class="clearfix"></div>
 					      </div>
 						  <div class="product_price">
-								<span class="price-access">$597.51</span>								
+								<span class="price-access">$597.51</span>
 								<button class="button1"><span>Add to cart</span></button>
 		                  </div>
 						 <div class="clearfix"></div>
@@ -894,18 +623,18 @@
 		                       </div>
 		                       <div class="prod1-desc">
 		                           <h5><a class="product_link" href="#">Excepteur sint</a></h5>
-		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>									
+		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
 							   </div>
 							   <div class="clearfix"></div>
 					      </div>
 						  <div class="product_price">
-								<span class="price-access">$597.51</span>								
+								<span class="price-access">$597.51</span>
 								<button class="button1"><span>Add to cart</span></button>
 		                  </div>
 						 <div class="clearfix"></div>
 				     </div>
 		   	  </div>
-	       </div>	
+	       </div>
 	       			<div class="col-md-3">
 	  <div class="w_sidebar">
 		<div class="w_nav1">
@@ -917,7 +646,7 @@
 				<li><a href="#">boys</a></li>
 				<li><a href="#">girls</a></li>
 				<li><a href="#">sale</a></li>
-			</ul>	
+			</ul>
 		</div>
 		<h3>filter by</h3>
 		<section  class="sky-form">
@@ -941,7 +670,7 @@
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>	
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
 							</div>
 						</div>
 		</section>
@@ -964,7 +693,7 @@
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>shree</label>
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>																								
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
 							</div>
 						</div>
 		</section>
@@ -1006,11 +735,11 @@
 								<label class="radio"><input type="radio" name="radio"><i></i>20 % and above</label>
 								<label class="radio"><input type="radio" name="radio"><i></i>10 % and above</label>
 							</div>
-						</div>						
+						</div>
 		</section>
 	</div>
    </div>
-		   <div class="clearfix"></div>		
+		   <div class="clearfix"></div>
 	  </div>
 	<!-- end content -->
 </div>
@@ -1031,7 +760,7 @@
 				<li><a href="#">trends</a></li>
 				<li><a href="#">sale</a></li>
 				<li><a href="#">style videos</a></li>
-			</ul>	
+			</ul>
 		</div>
 		<div class="span1_of_4">
 			<h4>help</h4>
@@ -1042,7 +771,7 @@
 				<li><a href="#">accessories</a></li>
 				<li><a href="#">kids</a></li>
 				<li><a href="#">brands</a></li>
-			</ul>				
+			</ul>
 			<h4 class="top">company name</h4>
 			<ul class="f_nav">
 				<li><a href="#">frequently asked  questions</a></li>
@@ -1051,7 +780,7 @@
 				<li><a href="#">accessories</a></li>
 				<li><a href="#">kids</a></li>
 				<li><a href="#">brands</a></li>
-			</ul>	
+			</ul>
 		</div>
 		<div class="span1_of_4">
 			<h4>account</h4>
@@ -1071,7 +800,7 @@
 				<li><a href="#">accessories</a></li>
 				<li><a href="#">kids</a></li>
 				<li><a href="#">brands</a></li>
-			</ul>				
+			</ul>
 		</div>
 		<div class="span1_of_4">
 			<h4>popular</h4>
@@ -1087,7 +816,7 @@
 				<li><a href="#">style videos</a></li>
 				<li><a href="#">login</a></li>
 				<li><a href="#">brands</a></li>
-			</ul>			
+			</ul>
 		</div>
 		<div class="clearfix"></div>
 		</div>

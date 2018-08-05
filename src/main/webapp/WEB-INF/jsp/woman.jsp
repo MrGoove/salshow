@@ -906,8 +906,8 @@
                 </ul>
                 <div class="clearfix"></div>
             </div>
-            <%--<!-- grids_of_4 -->
-            <div class="grids_of_4">
+            <!-- grids_of_4 -->
+           <%-- <div class="grids_of_4">
                 <div class="grid1_of_4">
                     <div class="content_box"><a href="${pageContext.request.contextPath}/details">
                         <div class="view view-fifth">
@@ -1073,7 +1073,7 @@
 </div>
 </div>--%>
 
-            <c:forEach items="${goodsList}" var="g">
+            <c:forEach items="${goodsList}" var="g" varStatus="status">
             <div class="grid1_of_4">
                 <div class="content_box"><a href="${pageContext.request.contextPath}/goods/goods?goodsName=${g.goodsname}">
                     <div class="view view-fifth">
@@ -1087,10 +1087,13 @@
                 Rmb ${g.price}
             </div>
         </div>
-        <div class="clearfix"></div>
-    </div>
+                <c:if test="${(status.index+1)%3 ==0}">
+                    <div class="clearfix"></div>
+                </c:if>
 
             </c:forEach>
+
+        </div>
 
 
 <!-- end grids_of_4 -->
