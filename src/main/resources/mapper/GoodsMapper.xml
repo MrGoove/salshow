@@ -11,7 +11,10 @@
         catogory,style,brand,color,discount
         FROM tb_goods WHERE goods_name = #{goods_name}
     </select>
-    <select id="getGoodsList" resultType="Goods">
+    <select id="getGoodsList" resultType="Goods" parameterType="Goods">
         select * FROM tb_goods
+        <if test="goodsname != null">
+             where goods_name like '%${goodsname}%'
+        </if>
     </select>
 </mapper>

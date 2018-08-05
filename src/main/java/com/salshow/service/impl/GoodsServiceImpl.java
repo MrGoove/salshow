@@ -15,8 +15,8 @@ public class GoodsServiceImpl implements GoodsService {
     private GoodsDao goodsDao;
 
     @Override
-    public List<Goods> getGoodsList() {
-        return goodsDao.getGoodsList();
+    public List<Goods> getGoodsList(Goods goods) {
+        return goodsDao.getGoodsList(goods);
     }
 
     @Override

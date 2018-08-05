@@ -109,8 +109,8 @@
 			</li>
 		</ul>
 		<div class="search">
-		    <form>
-		    	<input type="text" value="" placeholder="search...">
+		    <form action="${pageContext.request.contextPath}/goods/goodsList" method="GET">
+		    	<input type="text" id="goodsName" name="goodsName"  placeholder="search...">
 				<input type="submit" value="">
 			</form>
 		</div>

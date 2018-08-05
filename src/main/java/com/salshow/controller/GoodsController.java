@@ -28,11 +28,12 @@ public class GoodsController {
     }
 
     @RequestMapping("/goodsList")
-    public String getGoodsList(Model model){
-        List<Goods> goodsList = goodsService.getGoodsList();
-        goodsList.remove(1);
+    public String getGoodsList(ServletRequest request,Model model){
+        String goodsName = request.getParameter("goodsName");
+        Goods goods = new Goods();
+        goods.goodsname = goodsName;
+        List<Goods> goodsList = goodsService.getGoodsList(goods);
         model.addAttribute("goodsList",goodsList);
         return "woman";
     }
-
 }
