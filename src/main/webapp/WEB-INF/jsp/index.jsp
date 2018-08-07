@@ -126,7 +126,7 @@
 							<div class="h_nav">
 								<h4>shop</h4>
 								<ul>
-									<li><a href="${pageContext.request.contextPath}/goods/goods">测试用菜单1</a></li>
+									<li><a href="${pageContext.request.contextPath}/goods/goodsList">测试用菜单1</a></li>
 									<li><a href="${pageContext.request.contextPath}/goods/goodsList">测试用菜单2</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">测试用菜单3</a></li>
 									<li><a href="${pageContext.request.contextPath}/woman">测试用菜单4</a></li>

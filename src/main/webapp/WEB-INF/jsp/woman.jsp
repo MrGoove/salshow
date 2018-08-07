@@ -1074,6 +1074,7 @@
 </div>--%>
 
             <c:forEach items="${goodsList}" var="g" varStatus="status">
+            <div class="grids_of_4">
             <div class="grid1_of_4">
                 <div class="content_box"><a href="${pageContext.request.contextPath}/goods/goods?goodsName=${g.goodsname}">
                     <div class="view view-fifth">
@@ -1087,12 +1088,12 @@
                 Rmb ${g.price}
             </div>
         </div>
-                <c:if test="${(status.index+1)%3 ==0}">
+                <c:if test="${(status.index+1)%4 ==0}">
                     <div class="clearfix"></div>
                 </c:if>
 
             </c:forEach>
-
+            </div>
         </div>
 
 
