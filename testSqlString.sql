@@ -20,7 +20,7 @@ values ('古','天乐','test@email.com','123','香港樱花路23号',1);
 
 
 create table tb_goods (
-id int not null primary key auto_increment,
+id int(32) not null primary key auto_increment,
 goods_name varchar(200),
 photo_main varchar(100),
 photo_1 varchar(100),
