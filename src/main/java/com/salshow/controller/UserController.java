@@ -11,9 +11,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/User")
@@ -23,12 +26,12 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(ServletRequest httpRequest, ServletResponse httpresponse,HttpSession httpSession){
+    public String login(ServletRequest httpRequest, HttpServletResponse ServletResponse, HttpSession httpSession) throws ServletException,IOException{
         String email = httpRequest.getParameter("email2");
         String password = httpRequest.getParameter("password");
         User user = userService.login(email,password);
-        if(user != null){
-            httpSession.setAttribute("UserName",user.FName+user.LName);
+        if(user != null&& password.equals(user.password)){
+            httpSession.setAttribute("User",user);
             return "index";
         }else{
             return "loginError";
@@ -37,7 +40,7 @@ public class UserController {
 
     @RequestMapping("/logout")
     public String logout(HttpSession httpSession){
-        httpSession.removeAttribute("UserName");
+        httpSession.removeAttribute("User");
         return "index";
     }
 
@@ -51,7 +54,7 @@ public class UserController {
         user.address = request.getParameter("Address");
         user.buyamount =0;
         userService.SaveUser(user);
-        httpSession.setAttribute("UserName",user.FName+user.LName);
+        httpSession.setAttribute("User",user);
         return "index";
     }
 }

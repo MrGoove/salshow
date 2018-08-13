@@ -1,3 +1,4 @@
+<%@ page import="com.salshow.entity.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html>
@@ -37,10 +38,10 @@
 			<li><a href="#">Recently viewed</a></li>|
 			<li><a href="contact.html">Contact</a></li>|
 			<%
-				String userName = (String)session.getAttribute("UserName");
-			if(userName != null){
+				User user = (User)session.getAttribute("User");
+			if(user != null){
 			%>
-			<li><a href="#">${sessionScope.UserName},welcome</a></li>|
+			<li><a href="#">${sessionScope.User.FName}${sessionScope.User.LName},welcome</a></li>|
 			<li class="login" >
 					<div id="loginout">
 						<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">

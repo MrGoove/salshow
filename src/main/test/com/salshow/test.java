@@ -7,6 +7,8 @@ import com.salshow.entity.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.HashMap;
+
 public class test extends BaseTest {
 
     @Autowired
@@ -27,6 +29,14 @@ public class test extends BaseTest {
         String goods_name = "9000";
         Goods goods = goodsDao.getGoods(goods_name);
         System.out.println(goods);
+    }
+
+
+    @Test
+    public  void test(){
+
+        System.out.println(1<<4);
+
     }
 
 }
