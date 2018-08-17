@@ -16,7 +16,7 @@ buyamount int default 0
 );
 
 insert into tb_user(FName,LName,Email,password,address,gender)
-values ('古','天乐','sphinx12252@hotmail.com','123','香港樱花路23号',1);
+values ('古','天乐','sphinx12252@hotmail.com','64c8b1e43d8ba3115ab40bcea57f010b','香港樱花路23号',1);
 
 
 create table tb_goods (
