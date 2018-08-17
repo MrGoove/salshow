@@ -33,15 +33,16 @@
 					<li><a href="#">Recently viewed</a></li>|
 					<li><a href="contact.html">Contact</a></li>|
 						<%
-				String userName = (String)session.getAttribute("UserName");
+				String userName = (String)session.getAttribute("userName");
 			if(userName != null){
 			%>
-					<li><a href="#">${sessionScope.UserName},welcome</a></li>|
+					<li><a href="#">${sessionScope.userName},welcome</a></li>|
 					<li class="login" >
 						<div id="loginout">
 							<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
 								<fieldset id="outbody">
-									<input type="submit" id="logout" value="log out">
+									<%--<input type="submit" id="logout" value="log out">--%>
+									<a href="/User/logout">log out</a>
 								</fieldset>
 							</form>
 						</div>
