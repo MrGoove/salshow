@@ -107,8 +107,8 @@
          PropertiesPlaceholderConfigurer and abstract beans or anything else we might need: -->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
-        <property name="loginUrl" value="/user/logon"/>
-        <property name="successUrl" value="/user/success"/>
+        <property name="loginUrl" value="/index"/>
+        <property name="successUrl" value="/index"/>
         <property name="unauthorizedUrl" value="/unauthorized.jsp"/>
         <!-- The 'filters' property is not necessary since any declared javax.servlet.Filter bean
              defined will be automatically acquired and available via its beanName in chain
@@ -123,6 +123,7 @@
             <value>
                 /User/login = anon
                 /User/logout = logout
+                /goods/goods = authc
             </value>
         </property>
     </bean>
