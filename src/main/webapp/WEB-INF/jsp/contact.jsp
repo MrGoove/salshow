@@ -81,7 +81,12 @@
 <div class="container">
 	<div class="header">
 		<div class="logo">
-			<a href="index.jsp"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
+			<% if(userName==null){%>
+			<a class="arrow"  href="${pageContext.request.contextPath}/registration">create account <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+
+			<%} else{%>
+			<a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">manage Goods <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+			<%}%>
 		</div>
 		<!-- start header_right -->
 		<div class="header_right">

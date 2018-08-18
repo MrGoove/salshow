@@ -113,7 +113,12 @@
 		<!-- start header_right -->
 		<div class="header_right">
 		<div class="create_btn">
-			<a class="arrow"  href="registration.html">create account <img src="images/right_arrow.png" alt=""/>  </a>
+			<% if(userName==null){%>
+			<a class="arrow"  href="${pageContext.request.contextPath}/registration">create account <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+
+			<%} else{%>
+			<a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">manage Goods <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+			<%}%>
 		</div>
 		<ul class="icon1 sub-icon1 profile_img">
 			<li><a class="active-icon c2" href="#"> </a>

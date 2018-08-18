@@ -12,6 +12,15 @@ public class User implements Serializable {
     public int gender;
     public String photo;
     public int buyamount;
+    public String authorize;
+
+    public String getAuthorize() {
+        return authorize;
+    }
+
+    public void setAuthorize(String authorize) {
+        this.authorize = authorize;
+    }
 
     @Override
     public String toString() {

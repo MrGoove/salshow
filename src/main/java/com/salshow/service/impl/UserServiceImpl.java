@@ -3,6 +3,8 @@ package com.salshow.service.impl;
 import com.salshow.dao.UserDao;
 import com.salshow.entity.User;
 import com.salshow.service.UserService;
+import org.apache.shiro.crypto.hash.SimpleHash;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,4 +28,6 @@ public class UserServiceImpl implements UserService {
     public int SaveUser(User user) {
         return userDao.SaveUser(user);
     }
+
+
 }

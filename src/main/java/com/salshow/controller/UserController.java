@@ -4,11 +4,13 @@ import com.mysql.cj.Session;
 import com.salshow.dao.UserDao;
 import com.salshow.entity.User;
 import com.salshow.service.UserService;
+import com.salshow.service.impl.UserServiceImpl;
 import com.sun.deploy.net.HttpResponse;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -64,8 +66,25 @@ public class UserController {
         user.password= new SimpleHash("MD5",request.getParameter("password"),null,1024).toString();
         user.address = request.getParameter("Address");
         user.buyamount =0;
+        user.authorize="user";
         userService.SaveUser(user);
         httpSession.setAttribute("userName",user.Email);
         return "index";
+    }
+
+
+    //管理人员注册---不对外开放
+
+    @RequestMapping("/registerManage")
+    public void  addManager(){
+        User user = new User();
+        user.FName = "郭怀想";
+        user.LName = "老六";
+        user.Email = "22345@hotmail.com";
+        user.password= new SimpleHash("MD5","lch881607",null,1024).toString();
+        user.address ="大河";
+        user.buyamount =45;
+        user.authorize ="admin";
+        userService.SaveUser(user);
     }
 }

@@ -23,4 +23,9 @@ public class GoodsServiceImpl implements GoodsService {
     public Goods getGoods(String goods_name) {
         return goodsDao.getGoods(goods_name);
     }
+
+    @Override
+    public int saveGoods(Goods goods) {
+        return goodsDao.SaveGoods(goods);
+    }
 }

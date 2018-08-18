@@ -17,4 +17,14 @@
              where goods_name like '%${goodsname}%'
         </if>
     </select>
+
+    <insert id="SaveGoods" parameterType="Goods">
+        insert into tb_goods (goods_name,photo_main,description_brief,description_details,price) VALUES (
+            #{goodsname},
+            #{photomain},
+            #{descriptionbrief},
+            #{descriptiondetails},
+            #{price})
+            ;
+    </insert>
 </mapper>

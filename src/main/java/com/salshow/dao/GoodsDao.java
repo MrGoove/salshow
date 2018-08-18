@@ -7,4 +7,5 @@ import java.util.List;
 public interface GoodsDao {
     List<Goods> getGoodsList (Goods goods);
     Goods getGoods(String goods_name);
+    int SaveGoods(Goods goods);
 }

@@ -109,7 +109,7 @@
         <property name="securityManager" ref="securityManager"/>
         <property name="loginUrl" value="/index"/>
         <property name="successUrl" value="/index"/>
-        <property name="unauthorizedUrl" value="/unauthorized.jsp"/>
+        <property name="unauthorizedUrl" value="/unauthorized"/>
         <!-- The 'filters' property is not necessary since any declared javax.servlet.Filter bean
              defined will be automatically acquired and available via its beanName in chain
              definitions, but you can perform overrides or parent/child consolidated configuration
@@ -124,6 +124,7 @@
                 /User/login = anon
                 /User/logout = logout
                 /goods/goods = authc
+                /goods/goodsManage = roles[admin]
             </value>
         </property>
     </bean>
