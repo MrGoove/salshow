@@ -124,7 +124,6 @@
                 /User/login = anon
                 /User/logout = logout
                 /goods/goodsManage = roles[admin]
-                /goods/* = authc
             </value>
         </property>
     </bean>

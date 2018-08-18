@@ -14,7 +14,7 @@ public class Goods {
     public String descriptiondetails;
     public int price;
     public String sizes;
-    public int catogory;
+    public Integer catogory;
     public int style;
     public int brand;
     public int color;

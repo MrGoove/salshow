@@ -13,9 +13,14 @@
     </select>
     <select id="getGoodsList" resultType="Goods" parameterType="Goods">
         select * FROM tb_goods
+        <where>
         <if test="goodsname != null">
-             where goods_name like '%${goodsname}%'
+              goods_name like '%${goodsname}%'
         </if>
+        <if test="catogory != 0">
+             catogory = #{catogory}
+        </if>
+        </where>
     </select>
 
     <insert id="SaveGoods" parameterType="Goods">

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="salshow:war_real">
+    <output-path>$PROJECT_DIR$/out/artifacts/salshow_war_real</output-path>
+    <root id="archive" name="salshow_war_real.war">
+      <element id="artifact" artifact-name="salshow:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp" />
+    </root>
+  </artifact>
+</component>

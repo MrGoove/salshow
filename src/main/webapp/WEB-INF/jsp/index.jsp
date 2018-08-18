@@ -135,7 +135,7 @@
 									<h4>商店</h4>
 									<ul>
 										<li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
-										<li><a href="${pageContext.request.contextPath}/goods/goodsList">男装</a></li>
+										<li><a href="${pageContext.request.contextPath}/goods/goodsList?category=2">男装</a></li>
 										<li><a href="${pageContext.request.contextPath}/goods/goodsList">女装</a></li>
 										<li><a href="${pageContext.request.contextPath}/goods/goodsList">装饰</a></li>
 										<li><a href="${pageContext.request.contextPath}/goods/goodsList">童装</a></li>
