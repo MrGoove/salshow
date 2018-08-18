@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<h1>无权限查看该页面！</h1>
+<div style="text-align: center"><h1>只有admin管理员可以上传商品，您无权限查看该页面！</h1></div>
 </body>
 </html>

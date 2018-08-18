@@ -49,479 +49,133 @@
 <body>
 <!-- header_top -->
 <div class="top_bg">
-<div class="container">
-<div class="header_top">
-	<div class="top_left">
-		<h2><a href="#">50%off</a> use coupon code "big61" and get extra 33% off on orders above rs 2,229 </h2>
-	</div>
-	<div class="top_right">
-		<ul>
-			<li><a href="#">Recently viewed</a></li>|
-			<li><a href="contact.html">Contact</a></li>|
-				<%
+	<div class="container">
+		<div class="header_top">
+			<div class="top_left">
+				<h2><a href="#">50%off</a>清爽五折季</h2>
+			</div>
+			<div class="top_right">
+				<ul>
+					<li><a href="#">最近浏览</a></li>|
+					<li><a href="contact.html">联系我</a></li>|
+						<%
 				String userName = (String)session.getAttribute("userName");
 			if(userName != null){
 			%>
-			<li><a href="#">${sessionScope.userName},welcome</a></li>|
-			<li class="login" >
-				<div id="loginout">
-					<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
-						<fieldset id="outbody">
-							<%--<input type="submit" id="logout" value="log out">--%>
-							<a href="/User/logout">log out</a>
-						</fieldset>
-					</form>
-				</div>
-	</div>
-	</li>
-	<%} else{%>
-	<li class="login" >
-		<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
-			<div id="loginBox">
-				<form id="loginForm" action="${pageContext.request.contextPath}/User/login" method="POST">
-					<fieldset id="body">
-						<fieldset>
-							<label for="email">Email Address</label>
-							<input type="text" name="email2" id="email2">
-						</fieldset>
-						<fieldset>
-							<label for="password">Password</label>
-							<input type="password" name="password" id="password">
-						</fieldset>
-						<input type="submit" id="login" value="Sign in">
-						<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-					</fieldset>
-					<span><a href="#">Forgot your password?</a></span>
-				</form>
+					<li><a href="#">${sessionScope.userName},欢迎</a></li>|
+					<li class="login" >
+						<div id="loginout">
+							<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
+								<fieldset id="outbody">
+									<%--<input type="submit" id="logout" value="log out">--%>
+									<a href="/User/logout">登出</a>
+								</fieldset>
+							</form>
+						</div>
 			</div>
+			</li>
+			<%} else{%>
+			<li class="login" >
+				<div id="loginContainer"><a href="#" id="loginButton"><span>登陆</span></a>
+					<div id="loginBox">
+						<form id="loginForm" action="${pageContext.request.contextPath}/User/login" method="POST">
+							<fieldset id="body">
+								<fieldset>
+									<label for="email">邮箱</label>
+									<input type="text" name="email2" id="email2">
+								</fieldset>
+								<fieldset>
+									<label for="password">密码</label>
+									<input type="password" name="password" id="password">
+								</fieldset>
+								<input type="submit" id="login" value="Sign in">
+								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
+							</fieldset>
+							<span><a href="#">忘记密码?</a></span>
+						</form>
+					</div>
+				</div>
+			</li>
+			<%}%>
+			</ul>
 		</div>
-	</li>
-	<%}%>
-	</ul>
-</div>
-	<div class="clearfix"></div>
-</div>
+		<div class="clearfix"></div>
+	</div>
 </div>
 </div>
 <!-- header -->
 <div class="header_bg">
-<div class="container">
-	<div class="header">
-		<div class="logo">
-			<a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
-		</div>
-		<!-- start header_right -->
-		<div class="header_right">
-		<div class="create_btn">
-			<% if(userName==null){%>
-			<a class="arrow"  href="${pageContext.request.contextPath}/registration">create account <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
+			</div>
+			<!-- start header_right -->
+			<div class="header_right">
+				<div class="create_btn">
+					<% if(userName==null){%>
+					<a class="arrow"  href="${pageContext.request.contextPath}/registration">新建账号<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
 
-			<%} else{%>
-			<a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">manage Goods <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
-			<%}%>
-		</div>
-		<ul class="icon1 sub-icon1 profile_img">
-			<li><a class="active-icon c2" href="#"> </a>
-				<ul class="sub-icon1 list">
-					<li><h3>shopping cart empty</h3><a href=""></a></li>
-					<li><p>if items in your wishlit are missing, <a href="">login to your account</a> to view them</p></li>
+					<%} else{%>
+					<a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">管理商品<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+					<%}%>
+				</div>
+				<ul class="icon1 sub-icon1 profile_img">
+					<li><a class="active-icon c2" href="#"> </a>
+						<ul class="sub-icon1 list">
+							<li><h3>购物车空</h3><a href=""></a></li>
+							<li><p>查看购物车<a href="">请点击登陆</a> </p></li>
+						</ul>
+					</li>
 				</ul>
-			</li>
-		</ul>
-		<ul class="icon1 sub-icon1 profile_img">
-			<li><a class="active-icon c1" href="#"> </a>
-				<ul class="sub-icon1 list">
-					<li><h3>wishlist empty</h3><a href=""></a></li>
-					<li><p>if items in your wishlit are missing, <a href="">login to your account</a> to view them</p></li>
+				<ul class="icon1 sub-icon1 profile_img">
+					<li><a class="active-icon c1" href="#"> </a>
+						<ul class="sub-icon1 list">
+							<li><h3>心愿单空</h3><a href=""></a></li>
+							<li><p>查看心愿单 <a href="">请点击登陆</a></p></li>
+						</ul>
+					</li>
 				</ul>
-			</li>
-		</ul>
-		<div class="search">
-		    <form>
-		    	<input type="text" value="" placeholder="search...">
-				<input type="submit" value="">
-			</form>
-		</div>
-		<div class="clearfix"></div>
-		</div>
-		<!-- start header menu -->
-		<ul class="megamenu skyblue">
-			<li><a class="color1" href="${pageContext.request.contextPath}/index">Home</a></li>
-			<li class="grid"><a class="color2" href="#">new arrivals</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>shop</h4>
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/goods/goods">new arrivals</a></li>
-									<li><a href="${pageContext.request.contextPath}/goods/goodsList">men</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-									<li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
-								</ul>
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>help</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>popular</h4>
-
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    				</div>
-				</li>
-			<li class="active grid"><a class="color4" href="#">women</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>shop</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>help</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>popular</h4>
-
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    				</div>
-				</li>				
-				<li><a class="color5" href="#">accessories</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>shop</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>help</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>popular</h4>
-
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    				</div>
-				</li>
-				<li><a class="color6" href="#">kids</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>shop</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>help</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>popular</h4>
-
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    				</div>
-				</li>
-				<li><a class="color7" href="#">brands</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>shop</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>help</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>popular</h4>
-
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    			  </div>
-				</li>
-				<li><a class="color8" href="#">trends</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>shop</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>help</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>popular</h4>
-
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    			   </div>
-				</li>
-				<li><a class="color9" href="#">sale</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>shop</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>help</h4>
-
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>my company</h4>
-
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>popular</h4>
-
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    			  </div>
-				</li>
-				<li><a class="color10" href="contact.html">Contact</a>
+				<div class="search">
+					<form>
+						<input type="text" value="" placeholder="搜索...">
+						<input type="submit" value="">
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!-- start header menu -->
+			<ul class="megamenu skyblue">
+				<li><a class="color1" href="${pageContext.request.contextPath}/index">主页</a></li>
+				<li class="grid"><a class="color2" href="#">新品</a>
 					<div class="megapanel">
 						<div class="row">
-							<div class="col3">
+							<div class="col1">
 								<div class="h_nav">
-									<h4>contact us</h4>
+									<h4>商店</h4>
+                                    <ul>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">男装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">女装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">装饰</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">童装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">品牌</a></li>
+                                    </ul>
 								</div>
-								<form class="contact">
-									<label for="name">Name</label>
-									<input id="name" type="text"/>
-									<label for="email">E-mail</label>
-									<input id="email" type="text"/>
-									<label for="message">Message</label>
-									<textarea rows="8" id="message"></textarea>
-									<input type="submit" value="Send"/>
-								</form>
 							</div>
-							<div class="col3">
-							</div>
+						</div>
+						<div class="row">
+							<div class="col2"></div>
+							<div class="col1"></div>
+							<div class="col1"></div>
+							<div class="col1"></div>
+							<div class="col1"></div>
 						</div>
 					</div>
 				</li>
-		</ul>
+			</ul>
+		</div>
 	</div>
-</div>
 </div>
 <!-- content -->
 <div class="container">
@@ -752,109 +406,74 @@
 </div>
 <!-- footer_top -->
 <div class="footer_top">
- <div class="container">
-	<div class="span_of_4">
-		<div class="span1_of_4">
-			<h4>Shop</h4>
-			<ul class="f_nav">
-				<li><a href="#">new arrivals</a></li>
-				<li><a href="#">men</a></li>
-				<li><a href="#">women</a></li>
-				<li><a href="#">accessories</a></li>
-				<li><a href="#">kids</a></li>
-				<li><a href="#">brands</a></li>
-				<li><a href="#">trends</a></li>
-				<li><a href="#">sale</a></li>
-				<li><a href="#">style videos</a></li>
-			</ul>
-		</div>
-		<div class="span1_of_4">
-			<h4>help</h4>
-			<ul class="f_nav">
-				<li><a href="#">frequently asked  questions</a></li>
-				<li><a href="#">men</a></li>
-				<li><a href="#">women</a></li>
-				<li><a href="#">accessories</a></li>
-				<li><a href="#">kids</a></li>
-				<li><a href="#">brands</a></li>
-			</ul>
-			<h4 class="top">company name</h4>
-			<ul class="f_nav">
-				<li><a href="#">frequently asked  questions</a></li>
-				<li><a href="#">men</a></li>
-				<li><a href="#">women</a></li>
-				<li><a href="#">accessories</a></li>
-				<li><a href="#">kids</a></li>
-				<li><a href="#">brands</a></li>
-			</ul>
-		</div>
-		<div class="span1_of_4">
-			<h4>account</h4>
-			<ul class="f_nav">
-				<li><a href="#">login</a></li>
-				<li><a href="#">create an account</a></li>
-				<li><a href="#">create wishlist</a></li>
-				<li><a href="#">my shopping bag</a></li>
-				<li><a href="#">brands</a></li>
-				<li><a href="#">create wishlist</a></li>
-			</ul>
-			<h4 class="top">style zone</h4>
-			<ul class="f_nav">
-				<li><a href="#">frequently asked  questions</a></li>
-				<li><a href="#">men</a></li>
-				<li><a href="#">women</a></li>
-				<li><a href="#">accessories</a></li>
-				<li><a href="#">kids</a></li>
-				<li><a href="#">brands</a></li>
-			</ul>
-		</div>
-		<div class="span1_of_4">
-			<h4>popular</h4>
-			<ul class="f_nav">
-				<li><a href="#">new arrivals</a></li>
-				<li><a href="#">men</a></li>
-				<li><a href="#">women</a></li>
-				<li><a href="#">accessories</a></li>
-				<li><a href="#">kids</a></li>
-				<li><a href="#">brands</a></li>
-				<li><a href="#">trends</a></li>
-				<li><a href="#">sale</a></li>
-				<li><a href="#">style videos</a></li>
-				<li><a href="#">login</a></li>
-				<li><a href="#">brands</a></li>
-			</ul>
-		</div>
-		<div class="clearfix"></div>
-		</div>
-		<!-- start span_of_2 -->
-		<div class="span_of_2">
-		<div class="span1_of_2">
-			<h5>need help? <a href="#">contact us <span> ></span> </a> </h5>
-			<p>(or) Call us: +91-70-45022088</p>
-		</div>
-		<div class="span1_of_2">
-			<h5>follow us </h5>
-			<div class="social-icons">
-				     <ul>
-				        <li><a href="#" target="_blank"></a></li>
-				        <li><a href="#" target="_blank"></a></li>
-				        <li><a href="#" target="_blank"></a></li>
-				        <li><a href="#" target="_blank"></a></li>
-				        <li><a href="#" target="_blank"></a></li>
-					</ul>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		</div>
-  </div>
+    <div class="container">
+        <div class="span_of_4">
+            <div class="span1_of_4">
+                <h4>商店</h4>
+                <ul class="f_nav">
+                    <li><a href="#">新品</a></li>
+                    <li><a href="#">男士</a></li>
+                    <li><a href="#">女人</a></li>
+                    <li><a href="#">饰品</a></li>
+                    <li><a href="#">儿童</a></li>
+                    <li><a href="#">品牌</a></li>
+                    <li><a href="#">流行趋势</a></li>
+                    <li><a href="#">抢购</a></li>
+                </ul>
+            </div>
+            <div class="span1_of_4">
+                <h4>帮助</h4>
+                <ul class="f_nav">
+                    <li><a href="#">最多提问解答</a></li>
+                    <li><a href="#">人工服务</a></li>
+                    <li><a href="#">售后</a></li>
+                    <li><a href="#">联系地址</a></li>
+                </ul>
+
+            </div>
+            <div class="span1_of_4">
+                <h4>账号</h4>
+                <ul class="f_nav">
+                    <li><a href="#">登陆</a></li>
+                    <li><a href="#">新建账号</a></li>
+                    <li><a href="#">新建心愿单</a></li>
+                    <li><a href="#">新建购物车</a></li>
+                </ul>
+
+            </div>
+            <div class="span1_of_4">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- start span_of_2 -->
+        <div class="span_of_2">
+            <div class="span1_of_2">
+                <h5>需要帮助? <a href="#">联系我 <span> ></span> </a> </h5>
+                <p>手机:13286116949</p>
+            </div>
+            <div class="span1_of_2">
+                <h5>可通过以下方式与我联系：</h5>
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="#" target="_blank"></a></li>
+                        <li><a href="#" target="_blank"></a></li>
+                        <li><a href="#" target="_blank"></a></li>
+                        <li><a href="#" target="_blank"></a></li>
+                        <li><a href="#" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 </div>
 <!-- footer -->
 <div class="footer">
- <div class="container">
-	<div class="copy">
-		<p class="link">&copy; All rights reserved | Design by&nbsp; <a href="http://www.smallseashell.com">.小贝壳网站模板</a></p>
+	<div class="container">
+		<div class="copy">
+			<p class="link">&copy; All rights reserved | Design by MrGoove; <a href="sphinx12252@hotmail.com">联系我</a></p>
+		</div>
 	</div>
- </div>
 </div>
 </body>
 </html>

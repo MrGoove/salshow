@@ -11,43 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<div style="background-color:mediumseagreen;width: 20%;height:100%;float:left;" >
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a href="hello.jsp">情感天地</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>炉石传说</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>大漩涡</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>人文</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>学术研究</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>育儿心得</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>银色黎明</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>情感天地</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>体育竞技</a>
-    </div>
-    <div style="box-shadow: black;height: 10%;text-align: center;font-size: x-large">
-        <a>宠物天堂</a>
-    </div>
-
-</div>
-
-<div style="background-color: whitesmoke;width: 80%; height: 100%;float:right;">
-
-</div>
-
+  <h1>邮箱：sphinx12252@hotmail.com</h1>
 </body>
 </html>

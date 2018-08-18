@@ -1,8 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Shoppe Bootstarp Website Template | Women :: 小贝壳网站模板</title>
+    <title>Shoppe</title>
     <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <script type='text/javascript' src="${pageContext.request.contextPath}/resources/js/jquery-1.11.1.min.js"></script>
     <!-- Custom Theme files -->
@@ -32,23 +33,23 @@
     <div class="container">
         <div class="header_top">
             <div class="top_left">
-                <h2><a href="#">50%off</a> use coupon code "big61" and get extra 33% off on orders above rs 2,229 </h2>
+                <h2><a href="#">50%off</a>清爽五折季</h2>
             </div>
             <div class="top_right">
                 <ul>
-                    <li><a href="#">Recently viewed</a></li>|
-                    <li><a href="contact.html">Contact</a></li>|
+                    <li><a href="#">最近浏览</a></li>|
+                    <li><a href="contact.html">联系我</a></li>|
                         <%
 				String userName = (String)session.getAttribute("userName");
 			if(userName != null){
 			%>
-                    <li><a href="#">${sessionScope.userName},welcome</a></li>|
+                    <li><a href="#">${sessionScope.userName},欢迎</a></li>|
                     <li class="login" >
                         <div id="loginout">
                             <form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
                                 <fieldset id="outbody">
                                     <%--<input type="submit" id="logout" value="log out">--%>
-                                    <a href="/User/logout">log out</a>
+                                    <a href="/User/logout">登出</a>
                                 </fieldset>
                             </form>
                         </div>
@@ -56,22 +57,22 @@
             </li>
             <%} else{%>
             <li class="login" >
-                <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+                <div id="loginContainer"><a href="#" id="loginButton"><span>登陆</span></a>
                     <div id="loginBox">
                         <form id="loginForm" action="${pageContext.request.contextPath}/User/login" method="POST">
                             <fieldset id="body">
                                 <fieldset>
-                                    <label for="email">Email Address</label>
+                                    <label for="email">邮箱</label>
                                     <input type="text" name="email2" id="email2">
                                 </fieldset>
                                 <fieldset>
-                                    <label for="password">Password</label>
+                                    <label for="password">密码</label>
                                     <input type="password" name="password" id="password">
                                 </fieldset>
                                 <input type="submit" id="login" value="Sign in">
-                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
                             </fieldset>
-                            <span><a href="#">Forgot your password?</a></span>
+                            <span><a href="#">忘记密码?</a></span>
                         </form>
                     </div>
                 </div>
@@ -79,9 +80,9 @@
             <%}%>
             </ul>
         </div>
-            <div class="clearfix"></div>
-        </div>
+        <div class="clearfix"></div>
     </div>
+</div>
 </div>
 <!-- header -->
 <div class="header_bg">
@@ -90,81 +91,68 @@
             <div class="logo">
                 <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
             </div>
+
             <!-- start header_right -->
             <div class="header_right">
                 <div class="create_btn">
                     <% if(userName==null){%>
-                    <a class="arrow"  href="${pageContext.request.contextPath}/registration">create account <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+                    <a class="arrow"  href="${pageContext.request.contextPath}/registration">创建账号<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
 
                     <%} else{%>
-                    <a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">manage Goods <img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+                    <a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">管理商品<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
                     <%}%>
                 </div>
                 <ul class="icon1 sub-icon1 profile_img">
                     <li><a class="active-icon c2" href="#"> </a>
                         <ul class="sub-icon1 list">
-                            <li><h3>shopping cart empty</h3><a href=""></a></li>
-                            <li><p>if items in your wishlit are missing, <a href="">login to your account</a> to view them</p></li>
+                            <li><h3>购物车（空）</h3><a href=""></a></li>
+                            <li><p>查看购物车<a href="">请登陆</a></p></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="icon1 sub-icon1 profile_img">
                     <li><a class="active-icon c1" href="#"> </a>
                         <ul class="sub-icon1 list">
-                            <li><h3>wishlist empty</h3><a href=""></a></li>
-                            <li><p>if items in your wishlit are missing, <a href="">login to your account</a> to view them</p></li>
+                            <li><h3>心愿单（空）</h3><a href=""></a></li>
+                            <li><p>查看心愿单<a href="">请登陆</a></p></li>
                         </ul>
                     </li>
                 </ul>
                 <div class="search">
-                    <form>
-                        <input type="text" value="" placeholder="search...">
+                    <form action="${pageContext.request.contextPath}/goods/goodsList" method="GET">
+                        <input type="text" id="goodsName" name="goodsName"  placeholder="搜索...">
                         <input type="submit" value="">
                     </form>
                 </div>
-                <div class="clearfix"></div>
+                <div class="clearfix"> </div>
             </div>
+
             <!-- start header menu -->
             <ul class="megamenu skyblue">
-                <li><a class="color1" href="${pageContext.request.contextPath}/index">Home</a></li>
-                <li class="grid"><a class="color2" href="#">new arrivals</a>
+                <li><a class="color1" href="${pageContext.request.contextPath}/index">主页</a></li>
+                <li class="grid"><a class="color2" href="#">分类</a>
                     <div class="megapanel">
                         <div class="row">
                             <div class="col1">
                                 <div class="h_nav">
-                                    <h4>shop</h4>
+                                    <h4>商店</h4>
                                     <ul>
-                                        <li><a href="${pageContext.request.contextPath}/woman">new arrivals</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/woman">men</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/woman">accessories</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/woman">kids</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/woman">brands</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">男装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">女装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">装饰</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">童装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">品牌</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li><a class="color10" href="contact.html">Contact</a>
-                    <div class="megapanel">
                         <div class="row">
-                            <div class="col3">
-                                <div class="h_nav">
-                                    <h4>contact us</h4>
-                                </div>
-                                <form class="contact">
-                                    <label for="name">Name</label>
-                                    <input id="name" type="text"/>
-                                    <label for="email">E-mail</label>
-                                    <input id="email" type="text"/>
-                                    <label for="message">Message</label>
-                                    <textarea rows="8" id="message"></textarea>
-                                    <input type="submit" value="Send"/>
-                                </form>
-                            </div>
-                            <div class="col3">
-                            </div>
+                            <div class="col2"></div>
+                            <div class="col1"></div>
+                            <div class="col1"></div>
+                            <div class="col1"></div>
+                            <div class="col1"></div>
                         </div>
                     </div>
                 </li>
@@ -178,56 +166,35 @@
         <!-- start sidebar -->
         <div class="col-md-3">
             <div class="w_sidebar">
-                <div class="w_nav1">
-                    <h4>All</h4>
+
+                <section  class="sky-form">
+
+                    <h4>类别</h4>
+                    <div class="w_nav1">
+
                     <ul>
-                        <li><a href="${pageContext.request.contextPath}/woman">women</a></li>
-                        <li><a href="#">new arrivals</a></li>
-                        <li><a href="#">trends</a></li>
-                        <li><a href="#">boys</a></li>
-                        <li><a href="#">girls</a></li>
-                        <li><a href="#">sale</a></li>
+                        <li><a href="${pageContext.request.contextPath}/woman">女人</a></li>
+                        <li><a href="#">新品</a></li>
+                        <li><a href="#">潮流</a></li>
+                        <li><a href="#">男孩</a></li>
+                        <li><a href="#">女孩</a></li>
+                        <li><a href="#">促销</a></li>
                     </ul>
-                </div>
-                <h3>filter by</h3>
-                <section  class="sky-form">
-                    <h4>catogories</h4>
-                    <div class="row1 scroll-pane">
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>kurtas</label>
-                        </div>
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>kutis</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>churidar kurta</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>salwar</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>printed sari</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>shree</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-                        </div>
                     </div>
+
                 </section>
+
                 <section  class="sky-form">
-                    <h4>brand</h4>
+                    <h4>品牌</h4>
                     <div class="row1 scroll-pane">
                         <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>shree</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
-                        </div>
-                        <div class="col col-4">
+                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>七匹狼</label>
+                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>奥尼</label>
+                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>BiBA</label>
                             <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>vishud</label>
                             <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>amari</label>
                             <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>shree</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
+                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>美登斯邦威</label>
                             <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
                             <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>shree</label>
                             <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
@@ -239,7 +206,7 @@
                     </div>
                 </section>
                 <section class="sky-form">
-                    <h4>colour</h4>
+                    <h4>颜色</h4>
                     <ul class="w_nav2">
                         <li><a class="color1" href="#"></a></li>
                         <li><a class="color2" href="#"></a></li>
@@ -264,17 +231,17 @@
                     </ul>
                 </section>
                 <section class="sky-form">
-                    <h4>discount</h4>
+                    <h4>折扣</h4>
                     <div class="row1 scroll-pane">
                         <div class="col col-4">
-                            <label class="radio"><input type="radio" name="radio" checked=""><i></i>60 % and above</label>
-                            <label class="radio"><input type="radio" name="radio"><i></i>50 % and above</label>
-                            <label class="radio"><input type="radio" name="radio"><i></i>40 % and above</label>
+                            <label class="radio"><input type="radio" name="radio" checked=""><i></i>6折</label>
+                            <label class="radio"><input type="radio" name="radio"><i></i>5折</label>
+                            <label class="radio"><input type="radio" name="radio"><i></i>4折</label>
                         </div>
                         <div class="col col-4">
-                            <label class="radio"><input type="radio" name="radio"><i></i>30 % and above</label>
-                            <label class="radio"><input type="radio" name="radio"><i></i>20 % and above</label>
-                            <label class="radio"><input type="radio" name="radio"><i></i>10 % and above</label>
+                            <label class="radio"><input type="radio" name="radio"><i></i>3折</label>
+                            <label class="radio"><input type="radio" name="radio"><i></i>2折</label>
+                            <label class="radio"><input type="radio" name="radio"><i></i>1折</label>
                         </div>
                     </div>
                 </section>
@@ -283,13 +250,13 @@
         <!-- start content -->
         <div class="col-md-9 w_content">
             <div class="women">
-                <a href="#"><h4>Enthecwear - <span>${goodsList.size()==0?0:goodsList.size()}  items found</span> </h4></a>
+                <a href="#"><h4>商品列表<span>共有${goodsList.size()==0?0:goodsList.size()}件商品</span> </h4></a>
                 <ul class="w_nav">
-                    <li>Sort : </li>
-                    <li><a class="active" href="#">popular</a></li> |
-                    <li><a href="#">new </a></li> |
-                    <li><a href="#">discount</a></li> |
-                    <li><a href="#">price: Low High </a></li>
+                    <li>排序：</li>
+                    <li><a class="active" href="#">受欢迎</a></li> |
+                    <li><a href="#">上架时间</a></li> |
+                    <li><a href="#">折扣</a></li> |
+                    <li><a href="#">价格: 低 高 </a></li>
                     <div class="clear"></div>
                 </ul>
                 <div class="clearfix"></div>
@@ -499,85 +466,50 @@
     <div class="container">
         <div class="span_of_4">
             <div class="span1_of_4">
-                <h4>Shop</h4>
+                <h4>商店</h4>
                 <ul class="f_nav">
-                    <li><a href="#">new arrivals</a></li>
-                    <li><a href="#">men</a></li>
-                    <li><a href="#">women</a></li>
-                    <li><a href="#">accessories</a></li>
-                    <li><a href="#">kids</a></li>
-                    <li><a href="#">brands</a></li>
-                    <li><a href="#">trends</a></li>
-                    <li><a href="#">sale</a></li>
-                    <li><a href="#">style videos</a></li>
+                    <li><a href="#">新品</a></li>
+                    <li><a href="#">男士</a></li>
+                    <li><a href="#">女人</a></li>
+                    <li><a href="#">饰品</a></li>
+                    <li><a href="#">儿童</a></li>
+                    <li><a href="#">品牌</a></li>
+                    <li><a href="#">流行趋势</a></li>
+                    <li><a href="#">抢购</a></li>
                 </ul>
             </div>
             <div class="span1_of_4">
-                <h4>help</h4>
+                <h4>帮助</h4>
                 <ul class="f_nav">
-                    <li><a href="#">frequently asked  questions</a></li>
-                    <li><a href="#">men</a></li>
-                    <li><a href="#">women</a></li>
-                    <li><a href="#">accessories</a></li>
-                    <li><a href="#">kids</a></li>
-                    <li><a href="#">brands</a></li>
+                    <li><a href="#">最多提问解答</a></li>
+                    <li><a href="#">人工服务</a></li>
+                    <li><a href="#">售后</a></li>
+                    <li><a href="#">联系地址</a></li>
                 </ul>
-                <h4 class="top">company name</h4>
-                <ul class="f_nav">
-                    <li><a href="#">frequently asked  questions</a></li>
-                    <li><a href="#">men</a></li>
-                    <li><a href="#">women</a></li>
-                    <li><a href="#">accessories</a></li>
-                    <li><a href="#">kids</a></li>
-                    <li><a href="#">brands</a></li>
-                </ul>
+
             </div>
             <div class="span1_of_4">
-                <h4>account</h4>
+                <h4>账号</h4>
                 <ul class="f_nav">
-                    <li><a href="#">login</a></li>
-                    <li><a href="#">create an account</a></li>
-                    <li><a href="#">create wishlist</a></li>
-                    <li><a href="#">my shopping bag</a></li>
-                    <li><a href="#">brands</a></li>
-                    <li><a href="#">create wishlist</a></li>
+                    <li><a href="#">登陆</a></li>
+                    <li><a href="#">新建账号</a></li>
+                    <li><a href="#">新建心愿单</a></li>
+                    <li><a href="#">新建购物车</a></li>
                 </ul>
-                <h4 class="top">style zone</h4>
-                <ul class="f_nav">
-                    <li><a href="#">frequently asked  questions</a></li>
-                    <li><a href="#">men</a></li>
-                    <li><a href="#">women</a></li>
-                    <li><a href="#">accessories</a></li>
-                    <li><a href="#">kids</a></li>
-                    <li><a href="#">brands</a></li>
-                </ul>
+
             </div>
             <div class="span1_of_4">
-                <h4>popular</h4>
-                <ul class="f_nav">
-                    <li><a href="#">new arrivals</a></li>
-                    <li><a href="#">men</a></li>
-                    <li><a href="#">women</a></li>
-                    <li><a href="#">accessories</a></li>
-                    <li><a href="#">kids</a></li>
-                    <li><a href="#">brands</a></li>
-                    <li><a href="#">trends</a></li>
-                    <li><a href="#">sale</a></li>
-                    <li><a href="#">style videos</a></li>
-                    <li><a href="#">login</a></li>
-                    <li><a href="#">brands</a></li>
-                </ul>
             </div>
             <div class="clearfix"></div>
         </div>
         <!-- start span_of_2 -->
         <div class="span_of_2">
             <div class="span1_of_2">
-                <h5>need help? <a href="#">contact us <span> ></span> </a> </h5>
-                <p>(or) Call us: +91-70-45022088</p>
+                <h5>需要帮助? <a href="#">联系我 <span> ></span> </a> </h5>
+                <p>手机:13286116949</p>
             </div>
             <div class="span1_of_2">
-                <h5>follow us </h5>
+                <h5>可通过以下方式与我联系：</h5>
                 <div class="social-icons">
                     <ul>
                         <li><a href="#" target="_blank"></a></li>
@@ -596,7 +528,7 @@
 <div class="footer">
     <div class="container">
         <div class="copy">
-            <p class="link">&copy; All rights reserved | Design by&nbsp; <a href="http://www.smallseashell.com"></a></p>
+            <p class="link">&copy; All rights reserved | Design by MrGoove; <a href="/mainPage.jsp">联系我</a></p>
         </div>
     </div>
 </div>
