@@ -1,30 +1,22 @@
 
-create table tb_goods (
-id int not null primary key auto_increment,
-goods_name varchar(200),
-photo_main varchar(100),
-photo_1 varchar(100),
-photo_2 varchar(100),
-photo_3 varchar(100),
-photo_4 varchar(100),
-photo_5 varchar(100),
-photo_6 varchar(100),
-description_brief varchar(500),
-description_details varchar(2000),
-price int not null,
-sizes int,
-catogory int,
-style int,
-brand int,
-color int,
-discount int default 0
-);
+create database salshow;
+use salshow;
 
+create table tb_user(
+id int(32) not null primary key auto_increment,
+FName varchar(30),
+LName varchar(30),
+Email varchar(200),
+password varchar(100),
+address varchar(500),
+gender int ,
+photo varchar(200),
+buyamount int default 0 
+);
 
 insert into tb_user(FName,LName,Email,password,address,gender)
 values ('古','天乐','sphinx12252@hotmail.com','64c8b1e43d8ba3115ab40bcea57f010b','香港樱花路23号',1);
 
-
 create table tb_goods (
 id int not null primary key auto_increment,
 goods_name varchar(200),
@@ -45,7 +37,6 @@ brand int,
 color int,
 discount int default 0
 );
-
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
 
