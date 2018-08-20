@@ -27,7 +27,7 @@ public class shiro_realm extends AuthorizingRealm {
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            String url = "jdbc:mysql://localhost:3306/salshow?"
+            String url = "jdbc:mysql://192.168.0.101:3306/salshow?"
                     + "user=root&password=zyf181011485&useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC";
 
             Connection connection = DriverManager.getConnection(url);
@@ -61,7 +61,7 @@ public class shiro_realm extends AuthorizingRealm {
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            String url = "jdbc:mysql://localhost:3306/salshow?"
+            String url = "jdbc:mysql://192.168.0.101:3306/salshow?"
                     + "user=root&password=zyf181011485&useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC";
 
             Connection connection = DriverManager.getConnection(url);

@@ -51,12 +51,6 @@ public class UserController {
         return "index";
     }
 
-    @RequestMapping("/logout")
-    public String logout(HttpSession httpSession){
-        httpSession.removeAttribute("User");
-        return "index";
-    }
-
     @RequestMapping(value = "/regist",method = RequestMethod.POST)
     public String regist(ServletRequest request,HttpSession httpSession){
         User user = new User();

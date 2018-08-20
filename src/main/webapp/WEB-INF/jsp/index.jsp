@@ -43,11 +43,10 @@
 			%>
 					<li><a href="#">${sessionScope.userName},欢迎</a></li>|
 					<li class="login" >
-						<div id="loginout">
+						<div id="logoutD">
 							<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
 								<fieldset id="outbody">
-									<%--<input type="submit" id="logout" value="log out">--%>
-									<a href="/User/logout">登出</a>
+									<input type="submit" id="logout" value="登出">
 								</fieldset>
 							</form>
 						</div>

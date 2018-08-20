@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="salshow">
+    <output-path>$PROJECT_DIR$/out/artifacts/salshow</output-path>
+    <root id="archive" name="salshow.war">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp" />
+    </root>
+  </artifact>
+</component>
