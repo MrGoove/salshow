@@ -17,6 +17,9 @@ buyamount int default 0
 insert into tb_user(FName,LName,Email,password,address,gender)
 values ('古','天乐','sphinx12252@hotmail.com','64c8b1e43d8ba3115ab40bcea57f010b','香港樱花路23号',1);
 
+insert into tb_user(FName,LName,Email,password,address,gender,authorize)
+values ('刘','德华','1988@hotmail.com','64c8b1e43d8ba3115ab40bcea57f010b','香港樱花路22号',1,'admin');
+
 create table tb_goods (
 id int not null primary key auto_increment,
 goods_name varchar(200),
