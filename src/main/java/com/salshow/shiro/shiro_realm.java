@@ -82,6 +82,7 @@ public class shiro_realm extends AuthorizingRealm {
                 Jedis jedis = RedisUtils.getJedis();
                 jedis.incr(principal.toString());
                 jedis.close();
+
             }
 
         } catch (ClassNotFoundException e) {
