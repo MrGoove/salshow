@@ -4,4 +4,5 @@
 已集成shiro安全框架，对用户密码进行md5加密存储。<br/>
 使用redis保存用户登陆次数。<br/>
 测试方法：<br/>下载项目，在Itellij(我用的最新版）中导入项目，将resources文件夹下的jdbc.properties以及src/main/java/com/salshow/shiro/shiro_realm中与数据库相关的配置修改成你的数据库配置。<br/> 
+将RedisUtils类中的IP地址修改成"localhost"或者你的IP地址。
 在mysql中执行testSqlString中的sql语句，登陆普通测试账号为："sphinx12252@hotmail.com", 密码："123"，管理员测试账号："1988@hotmail.com",密码:"123"。
