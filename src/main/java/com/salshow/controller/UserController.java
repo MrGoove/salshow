@@ -3,6 +3,7 @@ package com.salshow.controller;
 import com.mysql.cj.Session;
 import com.salshow.dao.UserDao;
 import com.salshow.entity.User;
+import com.salshow.redisUtils.RedisUtils;
 import com.salshow.service.UserService;
 import com.salshow.service.impl.UserServiceImpl;
 import com.sun.deploy.net.HttpResponse;
@@ -14,9 +15,12 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import redis.clients.jedis.Jedis;
+import redis.clients.util.JedisURIHelper;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -33,7 +37,9 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(@RequestParam("email2") String email2,@RequestParam("password") String password, ServletRequest httpRequest, HttpServletResponse ServletResponse, HttpSession httpSession) throws ServletException,IOException{
+    public String login(@RequestParam("email2") String email2, @RequestParam("password") String password,
+                        ServletRequest httpRequest, HttpServletResponse ServletResponse,
+                        HttpSession httpSession, Model model) throws ServletException,IOException{
 
         Subject currentUser = SecurityUtils.getSubject();
 
@@ -42,7 +48,9 @@ public class UserController {
             try{
                 currentUser.login(token);
                 httpSession.setAttribute("userName", token.getUsername());
-                return "index";
+                Jedis redis= RedisUtils.getJedis();
+                model.addAttribute("loginCount",redis.get(token.getUsername()));
+                return  "index";
             }catch (Exception e){
                 e.printStackTrace();
                 return "loginError";

@@ -41,7 +41,7 @@
 				String userName = (String)session.getAttribute("userName");
 			if(userName != null){
 			%>
-					<li><a href="#">${sessionScope.userName},欢迎</a></li>|
+					<li><a href="#">${sessionScope.userName},欢迎,您的登陆次数为:${loginCount}</a></li>|
 					<li class="login" >
 						<div id="logoutD">
 							<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">

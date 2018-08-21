@@ -2,6 +2,7 @@ package com.salshow.shiro;
 
 import com.salshow.dao.UserDao;
 import com.salshow.entity.User;
+import com.salshow.redisUtils.RedisUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -10,6 +11,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import redis.clients.jedis.Jedis;
 
 import java.sql.*;
 import java.util.HashSet;
@@ -77,6 +79,9 @@ public class shiro_realm extends AuthorizingRealm {
                 Object credential = set.getString(5);
                 String realmName = getName();
                 info = new SimpleAuthenticationInfo(principal, credential, null, realmName);
+                Jedis jedis = RedisUtils.getJedis();
+                jedis.incr(principal.toString());
+                jedis.close();
             }
 
         } catch (ClassNotFoundException e) {
