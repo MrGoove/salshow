@@ -6,7 +6,6 @@ import com.salshow.entity.User;
 import com.salshow.redisUtils.RedisUtils;
 import com.salshow.service.UserService;
 import com.salshow.service.impl.UserServiceImpl;
-import com.sun.deploy.net.HttpResponse;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.crypto.hash.SimpleHash;
@@ -36,6 +35,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    Jedis redis= RedisUtils.getJedis();
+
+
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(@RequestParam("email2") String email2, @RequestParam("password") String password,
                         ServletRequest httpRequest, HttpServletResponse ServletResponse,
@@ -48,8 +50,8 @@ public class UserController {
             try{
                 currentUser.login(token);
                 httpSession.setAttribute("userName", token.getUsername());
-                Jedis redis= RedisUtils.getJedis();
                 model.addAttribute("loginCount",redis.get(token.getUsername()));
+                redis.close();
                 return  "index";
             }catch (Exception e){
                 e.printStackTrace();
@@ -61,7 +63,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/regist",method = RequestMethod.POST)
-    public String regist(ServletRequest request,HttpSession httpSession){
+    public String regist(ServletRequest request,HttpSession httpSession,Model model){
         User user = new User();
         user.FName = request.getParameter("FName");
         user.LName = request.getParameter("LName");
@@ -72,6 +74,9 @@ public class UserController {
         user.authorize="user";
         userService.SaveUser(user);
         httpSession.setAttribute("userName",user.Email);
+        model.addAttribute("loginCount","1");
+        redis.set(user.Email,"1");
+        redis.close();
         return "index";
     }
 

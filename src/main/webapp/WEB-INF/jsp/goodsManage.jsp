@@ -216,7 +216,7 @@
                         </div>
                         <div>
                             <label>
-                                <input name="desc_brief" placeholder="简要描述" type="email"/>
+                                <input name="desc_brief" placeholder="简要描述" type="text"/>
                             </label>
                         </div>
 
@@ -231,13 +231,18 @@
                         </div>--%>
                         <div>
                             <label>
-                                <input name="size" placeholder="尺寸" type="text" tabindex="5" required>
+                                尺寸: <br/>
+                                1&nbsp;<input name="size" type="radio" value="1">&nbsp;&nbsp;
+                                2&nbsp;<input name="size" type="radio" value="2">&nbsp;&nbsp;
+                                3&nbsp;<input name="size" type="radio" value="3">&nbsp;&nbsp;
+                                4&nbsp;<input name="size" type="radio" value="4">&nbsp;&nbsp;
+                                5&nbsp;<input name="size" type="radio" value="5">
                             </label>
                         </div>
 
                         <div>
                             <label>
-                                <input name="price" placeholder="价格" type="text" tabindex="5" required>
+                                <input name="price" placeholder="价格" type="text">
                             </label>
                         </div>
 

@@ -36,7 +36,7 @@
 			<div class="top_right">
 				<ul>
 					<li><a href="#">最近浏览</a></li>|
-					<li><a href="contact.html">联系我</a></li>|
+					<li><a href="contact.html">联系我(linux test)</a></li>|
 						<%
 				String userName = (String)session.getAttribute("userName");
 			if(userName != null){

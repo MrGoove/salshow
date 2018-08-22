@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>maven_test_2</groupId>
-  <artifactId>maven_test_2</artifactId>
+  <groupId>salshow</groupId>
+  <artifactId>salshow</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>maven_test_2 Maven Webapp</name>
+  <name>salshow Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -193,7 +193,7 @@
   </dependencies>
 
   <build>
-    <finalName>maven_test_2</finalName>
+    <finalName>salshow</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
@@ -224,6 +224,15 @@
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>2.0.2</version>
+          <configuration>
+            <webXml>C:/Users/sphinx12252/Documents/GitHub/salshow/src/main/webapp/WEB-INF/web.xml</webXml>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>

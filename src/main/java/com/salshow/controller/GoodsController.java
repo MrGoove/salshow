@@ -58,6 +58,7 @@ public class GoodsController {
         goods.descriptionbrief = request.getParameter("desc_brief");
         goods.descriptiondetails =request.getParameter("desc_details");
         goods.price =Integer.parseInt(request.getParameter("price"));
+        goods.sizes = request.getParameter("size");
         goodsService.saveGoods(goods,request);
         return "goodsMamage";
     }

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="salshow:war exploded">
-    <output-path>$PROJECT_DIR$/target/maven_test_2</output-path>
+  <artifact type="exploded-war" build-on-make="true" name="salshow:war exploded">
+    <output-path>$PROJECT_DIR$/target/salshow</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -72,7 +72,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/maven_test_2/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/salshow/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="salshow/web/Web" />
     </root>
