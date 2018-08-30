@@ -120,7 +120,7 @@
 			</div>
 			<!-- start header menu -->
 			<ul class="megamenu skyblue">
-				<li><a class="color1" href="${pageContext.request.contextPath}/index">Home</a></li>
+				<li><a class="color1" href="${pageContext.request.contextPath}/index">主页</a></li>
 				<li class="grid"><a class="color2" href="#">分类</a>
 					<div class="megapanel">
 						<div class="row">
@@ -205,11 +205,12 @@
 		</div>
 		<div class="shoping_bag2">
 			<div class="shoping_left">
-				<a class="btn1" href="${pageContext.request.contextPath}/goods/ConfirmBuy">点击购买</a>
+				<a class="btn1" href="${pageContext.request.contextPath}/goods/ConfirmBuy?id=${goods.id}">点击购买</a>
 			</div>
 			<div class="shoping_right">
 				<p class="tot">合计 &nbsp;<span class="color"> ${goods.price+goods.price/20}</span></p>
 			</div>
+			<div>库存:${goods.store}</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>

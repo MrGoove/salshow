@@ -60,4 +60,9 @@ public class GoodsServiceImpl implements GoodsService {
 
         return goodsDao.SaveGoods(goods);
     }
+
+    @Override
+    public int updateGoods(Goods goods) {
+        return goodsDao.updateGoods(goods);
+    }
 }

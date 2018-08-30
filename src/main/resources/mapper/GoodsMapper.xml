@@ -8,7 +8,7 @@
         SELECT id,goods_name as goodsname,photo_main as photomain,photo_1 as photo1,
         photo_2 as photo2,photo_3 as photo3,photo_4 as photo4,photo_5 as photo5,photo_6 as photo6,
         description_brief as descriptionbrief,description_details as descriptiondetails,price,sizes,
-        catogory,style,brand,color,discount
+        catogory,style,brand,color,discount,store
         FROM tb_goods
         <where>
             <if test="goodsname !=null and goodsname !=''">
@@ -32,14 +32,19 @@
     </select>
 
     <insert id="SaveGoods" parameterType="Goods">
-        insert into tb_goods (goods_name,photo_main,description_brief,description_details,price,catogory) VALUES (
+        insert into tb_goods (goods_name,photo_main,description_brief,description_details,price,catogory,store) VALUES (
             #{goodsname},
             #{photomain},
             #{descriptionbrief},
             #{descriptiondetails},
             #{price},
-            #{catogory}
+            #{catogory},
+            #{store}
             )
             ;
     </insert>
+
+    <update id="updateGoods" parameterType="Goods" >
+        update tb_goods set store = #{store} where id =#{id}
+    </update>
 </mapper>

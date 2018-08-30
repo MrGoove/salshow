@@ -19,6 +19,19 @@ public class Goods {
     public int brand;
     public int color;
     public int discount;
+    public int store;
+
+    public void setCatogory(Integer catogory) {
+        this.catogory = catogory;
+    }
+
+    public int getStore() {
+        return store;
+    }
+
+    public void setStore(int store) {
+        this.store = store;
+    }
 
     @Override
     public String toString() {

@@ -8,4 +8,5 @@ public interface GoodsDao {
     List<Goods> getGoodsList (Goods goods);
     Goods getGoods(Goods goods);
     int SaveGoods(Goods goods);
+    int updateGoods(Goods goods);
 }

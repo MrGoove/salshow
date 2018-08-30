@@ -10,4 +10,5 @@ public interface GoodsService {
     List<Goods> getGoodsList(Goods goods);
     Goods getGoods(Goods goods);
     int saveGoods(Goods goods, HttpServletRequest request) throws IOException;
+    int updateGoods(Goods goods);
 }

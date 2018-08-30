@@ -68,6 +68,7 @@ public class GoodsController {
         goods.price =Integer.parseInt(request.getParameter("price"));
         goods.sizes = request.getParameter("size");
         goods.catogory =Integer.parseInt(request.getParameter("goods_type"));
+        goods.store = Integer.parseInt(request.getParameter("store"));
         goodsService.saveGoods(goods,request);
         return "goodsManage";
     }
@@ -88,8 +89,12 @@ public class GoodsController {
     }
 
     @RequestMapping("/ConfirmBuy")
-    public String confirmBuy(){
-
+    public String confirmBuy(HttpServletRequest request){
+        Goods goods = new Goods();
+        goods.id =Integer.parseInt( request.getParameter("id"));
+        Goods resultGoods = goodsService.getGoods(goods);
+        resultGoods.store = resultGoods.store-1;
+        goodsService.updateGoods(resultGoods);
         return "orderSuccess";
     }
 

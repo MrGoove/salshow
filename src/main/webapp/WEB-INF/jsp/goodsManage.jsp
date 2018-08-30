@@ -269,6 +269,12 @@
 
                         <div>
                             <label>
+                                <input name="store" placeholder="库存" type="text">
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
                                 <textarea name="desc_details" id="desc_details" cols="100%" placeholder="详情描述"
                                           rows="10"></textarea>
                             </label>
@@ -304,7 +310,7 @@
                             <input type="submit" value="sign in" id="register-submit">
                         </div>
                         <div class="forget">
-                            <a href="#">forgot your password</a>
+                            <a href="#">忘记密码？</a>
                         </div>
                     </form>
                     <!-- /Form -->

@@ -246,7 +246,7 @@
 							</div>
 					</div>
 					<div class="btn_form">
-						<a href="${pageContext.request.contextPath}/goods/buy?id=${goods.id}">购买</a>
+						<a href="${pageContext.request.contextPath}/goods/buy?id=${goods.id}">购买</a><p>库存${goods.store}</p>
 					</div>
 					<a href="#"><span>login to save in wishlist </span></a>
 
