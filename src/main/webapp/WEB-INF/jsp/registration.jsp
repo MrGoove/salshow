@@ -127,13 +127,13 @@
 								<div class="h_nav">
 									<h4>商店</h4>
 									<ul>
-										<li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
-										<li><a href="${pageContext.request.contextPath}/goods/goodsList">男装</a></li>
-										<li><a href="${pageContext.request.contextPath}/goods/goodsList">女装</a></li>
-										<li><a href="${pageContext.request.contextPath}/goods/goodsList">装饰</a></li>
-										<li><a href="${pageContext.request.contextPath}/goods/goodsList">童装</a></li>
-										<li><a href="${pageContext.request.contextPath}/goods/goodsList">品牌</a></li>
-									</ul>
+
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=1">女装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=2">男装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=3">装饰</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=4">童装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=5">品牌</a></li></ul>
 								</div>
 							</div>
 						</div>

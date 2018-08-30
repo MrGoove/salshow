@@ -117,7 +117,7 @@
 					<a class="arrow"  href="${pageContext.request.contextPath}/registration">新建账号<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
 
 					<%} else{%>
-					<a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">管理商品<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+					<a class="arrow"  href="${pageContext.request.contextPath}/goods/addGoods">管理商品<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
 					<%}%>
 				</div>
 				<ul class="icon1 sub-icon1 profile_img">
@@ -147,7 +147,7 @@
 			<!-- start header menu -->
 			<ul class="megamenu skyblue">
 				<li><a class="color1" href="${pageContext.request.contextPath}/index">主页</a></li>
-				<li class="grid"><a class="color2" href="#">新品</a>
+				<li class="grid"><a class="color2" href="#">分类</a>
 					<div class="megapanel">
 						<div class="row">
 							<div class="col1">
@@ -155,12 +155,12 @@
 									<h4>商店</h4>
                                     <ul>
                                         <li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">男装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">女装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">装饰</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">童装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">品牌</a></li>
-                                    </ul>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=1">女装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=2">男装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=3">装饰</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=4">童装</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=5">品牌</a></li> </ul>
+            </ul>
 								</div>
 							</div>
 						</div>
@@ -410,15 +410,13 @@
         <div class="span_of_4">
             <div class="span1_of_4">
                 <h4>商店</h4>
-                <ul class="f_nav">
-                    <li><a href="#">新品</a></li>
-                    <li><a href="#">男士</a></li>
-                    <li><a href="#">女人</a></li>
-                    <li><a href="#">饰品</a></li>
-                    <li><a href="#">儿童</a></li>
-                    <li><a href="#">品牌</a></li>
-                    <li><a href="#">流行趋势</a></li>
-                    <li><a href="#">抢购</a></li>
+                <ul>
+					<li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
+					<li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=1">女装</a></li>
+					<li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=2">男装</a></li>
+					<li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=3">装饰</a></li>
+					<li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=4">童装</a></li>
+					<li><a href="${pageContext.request.contextPath}/goods/goodsList?catogory=5">品牌</a></li>
                 </ul>
             </div>
             <div class="span1_of_4">

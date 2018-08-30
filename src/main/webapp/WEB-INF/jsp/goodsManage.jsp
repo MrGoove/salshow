@@ -3,20 +3,29 @@
 <html>
 <head>
     <title>Shoppe Bootstarp Website Template | Registration :: 小贝壳网站模板</title>
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel='stylesheet' type='text/css'/>
     <!-- jQuery (necessary JavaScript plugins) -->
     <script type='text/javascript' src="${pageContext.request.contextPath}/resources/js/jquery-1.11.1.min.js"></script>
     <!-- Custom Theme files -->
-    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel='stylesheet' type='text/css'/>
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
     <!--webfont-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- start menu -->
-    <link href="${pageContext.request.contextPath}/resources/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/resources/css/megamenu.css" rel="stylesheet" type="text/css"
+          media="all"/>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/megamenu.js"></script>
-    <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+    <script>$(document).ready(function () {
+        $(".megamenu").megamenu();
+    });</script>
     <script src="${pageContext.request.contextPath}/resources/js/menu_jquery.js"></script>
     <script src="/resources/js/jquery.uploadifive.min.js"></script>
 </head>
@@ -30,14 +39,17 @@
             </div>
             <div class="top_right">
                 <ul>
-                    <li><a href="#">最近浏览</a></li>|
-                    <li><a href="contact.html">联系我</a></li>|
+                    <li><a href="#">最近浏览</a></li>
+                    |
+                    <li><a href="contact.html">联系我</a></li>
+                    |
                         <%
 				String userName = (String)session.getAttribute("userName");
 			if(userName != null){
 			%>
-                    <li><a href="#">${sessionScope.userName},欢迎</a></li>|
-                    <li class="login" >
+                    <li><a href="#">${sessionScope.userName},欢迎</a></li>
+                    |
+                    <li class="login">
                         <div id="loginout">
                             <form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
                                 <fieldset id="outbody">
@@ -48,8 +60,8 @@
                         </div>
             </div>
             </li>
-            <%} else{%>
-            <li class="login" >
+            <%} else {%>
+            <li class="login">
                 <div id="loginContainer"><a href="#" id="loginButton"><span>登陆</span></a>
                     <div id="loginBox">
                         <form id="loginForm" action="${pageContext.request.contextPath}/User/login" method="POST">
@@ -82,16 +94,19 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
+                <a href="${pageContext.request.contextPath}/index"><img
+                        src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
             </div>
             <!-- start header_right -->
             <div class="header_right">
                 <div class="create_btn">
-                    <% if(userName==null){%>
-                    <a class="arrow"  href="${pageContext.request.contextPath}/registration">创建账号<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+                    <% if (userName == null) {%>
+                    <a class="arrow" href="${pageContext.request.contextPath}/registration">创建账号<img
+                            src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/> </a>
 
-                    <%} else{%>
-                    <a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">管理商品<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+                    <%} else {%>
+                    <a class="arrow" href="${pageContext.request.contextPath}/goods/goodsManage">管理商品<img
+                            src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/> </a>
                     <%}%>
                 </div>
                 <ul class="icon1 sub-icon1 profile_img">
@@ -112,11 +127,11 @@
                 </ul>
                 <div class="search">
                     <form action="${pageContext.request.contextPath}/goods/goodsList" method="GET">
-                        <input type="text" id="goodsName" name="goodsName"  placeholder="搜索...">
+                        <input type="text" id="goodsName" name="goodsName" placeholder="搜索...">
                         <input type="submit" value="">
                     </form>
                 </div>
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
             </div>
 
             <!-- start header menu -->
@@ -129,12 +144,23 @@
                                 <div class="h_nav">
                                     <h4>商店</h4>
                                     <ul>
+
                                         <li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">男装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">女装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">装饰</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">童装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">品牌</a></li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=1">女装</a>
+                                        </li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=2">男装</a>
+                                        </li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=3">装饰</a>
+                                        </li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=4">童装</a>
+                                        </li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=5">品牌</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -158,7 +184,7 @@
         <!-- start registration -->
         <div class="registration">
             <div class="registration_left">
-                <h2> <span> 上架商品 </span></h2>
+                <h2><span> 上架商品 </span></h2>
                 <!-- [if IE]
                     < link rel='stylesheet' type='text/css' href='ie.css'/>
                  [endif] -->
@@ -170,7 +196,7 @@
 
                 <script>
 
-                    (function() {
+                    (function () {
 
                         // Create input element for testing
                         var inputs = document.createElement('input');
@@ -178,28 +204,28 @@
                         // Create the supports object
                         var supports = {};
 
-                        supports.autofocus   = 'autofocus' in inputs;
-                        supports.required    = 'required' in inputs;
+                        supports.autofocus = 'autofocus' in inputs;
+                        supports.required = 'required' in inputs;
                         supports.placeholder = 'placeholder' in inputs;
 
                         // Fallback for autofocus attribute
-                        if(!supports.autofocus) {
+                        if (!supports.autofocus) {
 
                         }
 
                         // Fallback for required attribute
-                        if(!supports.required) {
+                        if (!supports.required) {
 
                         }
 
                         // Fallback for placeholder attribute
-                        if(!supports.placeholder) {
+                        if (!supports.placeholder) {
 
                         }
 
                         // Change text inside send button on submit
                         var send = document.getElementById('register-submit');
-                        if(send) {
+                        if (send) {
                             send.onclick = function () {
                                 this.innerHTML = '...Sending';
                             }
@@ -208,32 +234,33 @@
                     })();
 
                     $('#file_upload').uploadifive({
-                        'uploadScript':'${request.getSession().getServletContext().getRealPath("/")} +"resources/images/goods/"',
-                        'buttonText':'选择文件',
-                        'multi':true,
-                        'auto':false,
+                        'uploadScript': '${request.getSession().getServletContext().getRealPath("/")} +"resources/images/goods/"',
+                        'buttonText': '选择文件',
+                        'multi': true,
+                        'auto': false,
                         'fileObjName': 'filedata', //后台接收file参数
-                        'onUploadComplete':function(file, data) {//每一个文件上传完毕时执行
+                        'onUploadComplete': function (file, data) {//每一个文件上传完毕时执行
                             comsole.log(file.name);
                         },
-                        'onQueueComplete':function(uploads) {//所有文件上传完毕时执行
+                        'onQueueComplete': function (uploads) {//所有文件上传完毕时执行
                             comsole.log(uploads.successful);
                         }
                     });
                 </script>
                 <div class="registration_form">
                     <!-- Form -->
-                    <form id="registration_form" action="${pageContext.request.contextPath}/goods/goodsMamage" method="post" enctype="multipart/form-data">
+                    <form id="registration_form" action="${pageContext.request.contextPath}/goods/goodsMamage"
+                          method="post" enctype="multipart/form-data">
                         <div>
                             <label>
                                 <input name="goods_name" placeholder="商品名称" type="text"/>
                             </label>
                         </div>
                         <div>
-                                上传主页面照片<input name="main_photo" type="file"/>
+                            上传主页面照片<input name="main_photo" type="file"/>
                         </div>
                         <div>
-                                上传详情图片（最多4张) <input type="file" id="file_upload">
+                            上传详情图片（最多4张) <input type="file" id="file_upload">
                         </div>
                         <div>
                             <label>
@@ -253,7 +280,7 @@
                         <div>
                             <label>
                                 类型: <br/>
-                                女性用品&nbsp;<input name="goods_type" type="radio" value="1">&nbsp;&nbsp;
+                                女性用品&nbsp;<input name="goods_type" checked="checked" type="radio" value="1">&nbsp;&nbsp;
                                 男性用品&nbsp;<input name="goods_type" type="radio" value="2">&nbsp;&nbsp;
                                 儿童用品&nbsp;<input name="goods_type" type="radio" value="3">&nbsp;&nbsp;
                                 装饰品&nbsp;<input name="goods_type" type="radio" value="4">&nbsp;&nbsp;
@@ -284,7 +311,8 @@
                             <input type="submit" value="确认上架商品" id="register-submit">
                         </div>
                         <div class="sky-form">
-                            <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>我同意商品管理条例 &nbsp;<a class="terms" href="#"> 商品管理条例 </a> </label>
+                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>我同意商品管理条例 &nbsp;<a
+                                    class="terms" href="#"> 商品管理条例 </a> </label>
                         </div>
                     </form>
                     <!-- /Form -->
@@ -292,7 +320,11 @@
             </div>
             <div style="display: none" class="registration_left">
                 <h2>existing user</h2>
-                <a href="#"><div class="reg_fb"><img src="images/facebook.png" alt=""><i>sign in using Facebook</i><div class="clear"></div></div></a>
+                <a href="#">
+                    <div class="reg_fb"><img src="images/facebook.png" alt=""><i>sign in using Facebook</i>
+                        <div class="clear"></div>
+                    </div>
+                </a>
                 <div class="registration_form">
                     <!-- Form -->
                     <form id="registration_form" action="${pageContext.request.contextPath}/User/regist" method="post">
@@ -365,7 +397,7 @@
         <!-- start span_of_2 -->
         <div class="span_of_2">
             <div class="span1_of_2">
-                <h5>需要帮助? <a href="#">联系我 <span> ></span> </a> </h5>
+                <h5>需要帮助? <a href="#">联系我 <span> ></span> </a></h5>
                 <p>手机:13286116949</p>
             </div>
             <div class="span1_of_2">
@@ -388,7 +420,8 @@
 <div class="footer">
     <div class="container">
         <div class="copy">
-            <p class="link">&copy; All rights reserved | Design by MrGoove; <a href="sphinx12252@hotmail.com">联系我</a></p>
+            <p class="link">&copy; All rights reserved | Design by MrGoove; <a href="sphinx12252@hotmail.com">联系我</a>
+            </p>
         </div>
     </div>
 </div>

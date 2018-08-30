@@ -44,11 +44,11 @@ public class GoodsController {
     }
 
     @RequestMapping("/goodsList")
-    public String getGoodsList(@RequestParam(value = "category",required = false) Integer category, ServletRequest request, Model model){
+    public String getGoodsList(@RequestParam(value = "catogory",required = false) Integer catogory, ServletRequest request, Model model){
             String goodsName = request.getParameter("goodsName");
             Goods goods = new Goods();
             goods.goodsname = goodsName;
-            goods.catogory =category==null?0:category;
+            goods.catogory =catogory==null?0:catogory;
             List<Goods> goodsList = goodsService.getGoodsList(goods);
             model.addAttribute("goodsList",goodsList);
             return "woman";

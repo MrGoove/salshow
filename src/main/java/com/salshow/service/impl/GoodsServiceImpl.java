@@ -14,6 +14,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
@@ -38,7 +39,6 @@ public class GoodsServiceImpl implements GoodsService {
     public int saveGoods(Goods goods, HttpServletRequest request) throws IOException {
 
         String FilePath = null;
-
         CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());
 
         if(commonsMultipartResolver.isMultipart(request)){
@@ -47,12 +47,15 @@ public class GoodsServiceImpl implements GoodsService {
             while(iter.hasNext()){
                 MultipartFile file = multiRequest.getFile(iter.next().toString());
                 if(file != null){
-                    FilePath = request.getSession().getServletContext().getRealPath("/") +"resources/images/goods/"+file.getOriginalFilename();
+                    /*FilePath = request.getSession().getServletContext().getRealPath("/") +"resources/images/goods/"+file.getOriginalFilename();*/
+                    File linuxFile = new File("/usr/local/images/" + goods.goodsname);
+                    linuxFile.setWritable(true,false);
+                    linuxFile.mkdirs();
 
-                    /*FilePath = "/url/local/images/" +file.getOriginalFilename();*/
+                    FilePath = "/usr/local/images/"+goods.goodsname+"/"+file.getOriginalFilename();
 
                     file.transferTo(new File(FilePath));
-                    goods.photomain ="/resources/images/goods/"+file.getOriginalFilename();
+                    goods.photomain ="/resources/images/"+goods.goodsname +"/"+ file.getOriginalFilename();
                 }
             }
         }

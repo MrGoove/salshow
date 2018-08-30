@@ -123,7 +123,7 @@
             <value>
                 /User/login = anon
                 /User/logout = logout
-                /goods/goodsManage = roles[admin]
+                /goods/addGoods = roles[admin]
             </value>
         </property>
     </bean>

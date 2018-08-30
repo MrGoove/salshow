@@ -2,190 +2,221 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Shoppe</title>
-<link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary JavaScript plugins) -->
-<script type='text/javascript' src="${pageContext.request.contextPath}/resources/js/jquery-1.11.1.min.js"></script>
-<!-- Custom Theme files -->
-<link href="${pageContext.request.contextPath}/resources/css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--webfont-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<!-- start menu -->
-<link href="${pageContext.request.contextPath}/resources/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<script src="${pageContext.request.contextPath}/resources/js/menu_jquery.js"></script>
+    <title>Shoppe</title>
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <!-- jQuery (necessary JavaScript plugins) -->
+    <script type='text/javascript' src="${pageContext.request.contextPath}/resources/js/jquery-1.11.1.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel='stylesheet' type='text/css'/>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- start menu -->
+    <link href="${pageContext.request.contextPath}/resources/css/megamenu.css" rel="stylesheet" type="text/css"
+          media="all"/>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/megamenu.js"></script>
+    <script>$(document).ready(function () {
+        $(".megamenu").megamenu();
+    });</script>
+    <script src="${pageContext.request.contextPath}/resources/js/menu_jquery.js"></script>
 </head>
 <body>
 <!-- header_top -->
 <div class="top_bg">
-	<div class="container">
-		<div class="header_top">
-			<div class="top_left">
-				<h2><a href="#">50%off</a>清爽五折季</h2>
-			</div>
-			<div class="top_right">
-				<ul>
-					<li><a href="#">最近浏览</a></li>|
-					<li><a href="contact.html">联系我</a></li>|
-						<%
+    <div class="container">
+        <div class="header_top">
+            <div class="top_left">
+                <h2><a href="#">50%off</a>清爽五折季</h2>
+            </div>
+            <div class="top_right">
+                <ul>
+                    <li><a href="#">最近浏览</a></li>
+                    |
+                    <li><a href="contact.html">联系我</a></li>
+                    |
+                        <%
 				String userName = (String)session.getAttribute("userName");
 			if(userName != null){
 			%>
-					<li><a href="#">${sessionScope.userName},欢迎</a></li>|
-					<li class="login" >
-						<div id="loginout">
-							<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
-								<fieldset id="outbody">
-									<%--<input type="submit" id="logout" value="log out">--%>
-									<a href="/User/logout">登出</a>
-								</fieldset>
-							</form>
-						</div>
-			</div>
-			</li>
-			<%} else{%>
-			<li class="login" >
-				<div id="loginContainer"><a href="#" id="loginButton"><span>登陆</span></a>
-					<div id="loginBox">
-						<form id="loginForm" action="${pageContext.request.contextPath}/User/login" method="POST">
-							<fieldset id="body">
-								<fieldset>
-									<label for="email">邮箱</label>
-									<input type="text" name="email2" id="email2">
-								</fieldset>
-								<fieldset>
-									<label for="password">密码</label>
-									<input type="password" name="password" id="password">
-								</fieldset>
-								<input type="submit" id="login" value="Sign in">
-								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
-							</fieldset>
-							<span><a href="#">忘记密码?</a></span>
-						</form>
-					</div>
-				</div>
-			</li>
-			<%}%>
-			</ul>
-		</div>
-		<div class="clearfix"></div>
-	</div>
+                    <li><a href="#">${sessionScope.userName},欢迎</a></li>
+                    |
+                    <li class="login">
+                        <div id="loginout">
+                            <form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
+                                <fieldset id="outbody">
+                                    <%--<input type="submit" id="logout" value="log out">--%>
+                                    <a href="/User/logout">登出</a>
+                                </fieldset>
+                            </form>
+                        </div>
+            </div>
+            </li>
+            <%} else {%>
+            <li class="login">
+                <div id="loginContainer"><a href="#" id="loginButton"><span>登陆</span></a>
+                    <div id="loginBox">
+                        <form id="loginForm" action="${pageContext.request.contextPath}/User/login" method="POST">
+                            <fieldset id="body">
+                                <fieldset>
+                                    <label for="email">邮箱</label>
+                                    <input type="text" name="email2" id="email2">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="password">密码</label>
+                                    <input type="password" name="password" id="password">
+                                </fieldset>
+                                <input type="submit" id="login" value="Sign in">
+                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
+                            </fieldset>
+                            <span><a href="#">忘记密码?</a></span>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <%}%>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 </div>
 </div>
 <!-- header -->
 <div class="header_bg">
-	<div class="container">
-		<div class="header">
-			<div class="logo">
-				<a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
-			</div>
-			<!-- start header_right -->
-			<div class="header_right">
-				<div class="create_btn">
-					<% if(userName==null){%>
-					<a class="arrow"  href="${pageContext.request.contextPath}/registration">新建账号<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="${pageContext.request.contextPath}/index"><img
+                        src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""/> </a>
+            </div>
+            <!-- start header_right -->
+            <div class="header_right">
+                <div class="create_btn">
+                    <% if (userName == null) {%>
+                    <a class="arrow" href="${pageContext.request.contextPath}/registration">新建账号<img
+                            src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/> </a>
 
-					<%} else{%>
-					<a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">管理商品<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
-					<%}%>
-				</div>
-				<ul class="icon1 sub-icon1 profile_img">
-					<li><a class="active-icon c2" href="#"> </a>
-						<ul class="sub-icon1 list">
-							<li><h3>购物车空</h3><a href=""></a></li>
-							<li><p>查看购物车<a href="">请点击登陆</a> </p></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="icon1 sub-icon1 profile_img">
-					<li><a class="active-icon c1" href="#"> </a>
-						<ul class="sub-icon1 list">
-							<li><h3>心愿单空</h3><a href=""></a></li>
-							<li><p>查看心愿单 <a href="">请点击登陆</a></p></li>
-						</ul>
-					</li>
-				</ul>
-				<div class="search">
-					<form>
-						<input type="text" value="" placeholder="search...">
-						<input type="submit" value="">
-					</form>
-				</div>
-				<div class="clearfix"></div>
-			</div><!-- start header menu -->
-			<ul class="megamenu skyblue">
-				<li><a class="color1" href="${pageContext.request.contextPath}/index">主页</a></li>
-				<li class="grid"><a class="color2" href="#">分类</a>
-					<div class="megapanel">
-						<div class="row">
-							<div class="col1">
-								<div class="h_nav">
-									<h4>商店</h4>
+                    <%} else {%>
+                    <a class="arrow" href="${pageContext.request.contextPath}/goods/goodsManage">管理商品<img
+                            src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/> </a>
+                    <%}%>
+                </div>
+                <ul class="icon1 sub-icon1 profile_img">
+                    <li><a class="active-icon c2" href="#"> </a>
+                        <ul class="sub-icon1 list">
+                            <li><h3>购物车空</h3><a href=""></a></li>
+                            <li><p>查看购物车<a href="">请点击登陆</a></p></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="icon1 sub-icon1 profile_img">
+                    <li><a class="active-icon c1" href="#"> </a>
+                        <ul class="sub-icon1 list">
+                            <li><h3>心愿单空</h3><a href=""></a></li>
+                            <li><p>查看心愿单 <a href="">请点击登陆</a></p></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search">
+                    <form>
+                        <input type="text" value="" placeholder="search...">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div><!-- start header menu -->
+            <ul class="megamenu skyblue">
+                <li><a class="color1" href="${pageContext.request.contextPath}/index">主页</a></li>
+                <li class="grid"><a class="color2" href="#">分类</a>
+                    <div class="megapanel">
+                        <div class="row">
+                            <div class="col1">
+                                <div class="h_nav">
+                                    <h4>商店</h4>
                                     <ul>
+
                                         <li><a href="${pageContext.request.contextPath}/goods/goodsList">新品</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">男装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">女装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">装饰</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">童装</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/goods/goodsList">品牌</a></li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=1">女装</a>
+                                        </li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=2">男装</a>
+                                        </li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=3">装饰</a>
+                                        </li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=4">童装</a>
+                                        </li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=5">品牌</a>
+                                        </li>
                                     </ul>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col2"></div>
-							<div class="col1"></div>
-							<div class="col1"></div>
-							<div class="col1"></div>
-							<div class="col1"></div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col2"></div>
+                            <div class="col1"></div>
+                            <div class="col1"></div>
+                            <div class="col1"></div>
+                            <div class="col1"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 <!-- content -->
 <div class="container">
-<div class="main">
-<div class="contact">				
-					<div class="contact_info">
-						<h2>get in touch</h2>
-			    	 		<div class="map">
-					   			<iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#777777;text-align:left;font-size:13px;">View Larger Map</a></small>
-					   		</div>
-      				</div>
-				  <div class="contact-form">
-			 	  	 	<h2>Contact Us</h2>
-			 	 	    <form method="post" action="contact-post.html">
-					    	<div>
-						    	<span><label>Name</label></span>
-						    	<span><input name="userName" type="text" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>E-mail</label></span>
-						    	<span><input name="userEmail" type="text" class="textbox"></span>
-						    </div>
-						    <div>
-						     	<span><label>Mobile</label></span>
-						    	<span><input name="userPhone" type="text" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>Subject</label></span>
-						    	<span><textarea name="userMsg"> </textarea></span>
-						    </div>
-						   <div>
-						   		<span><input type="submit" class="" value="Submit us"></span>
-						  </div>
-					    </form>
-				    </div>
-  				<div class="clearfix"></div>		
-			  </div>
-</div>
+    <div class="main">
+        <div class="contact">
+            <div class="contact_info">
+                <h2>get in touch</h2>
+                <div class="map">
+                    <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe>
+                    <br>
+                    <small><a
+                            href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265"
+                            style="color:#777777;text-align:left;font-size:13px;">View Larger Map</a></small>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form method="post" action="contact-post.html">
+                    <div>
+                        <span><label>Name</label></span>
+                        <span><input name="userName" type="text" class="textbox"></span>
+                    </div>
+                    <div>
+                        <span><label>E-mail</label></span>
+                        <span><input name="userEmail" type="text" class="textbox"></span>
+                    </div>
+                    <div>
+                        <span><label>Mobile</label></span>
+                        <span><input name="userPhone" type="text" class="textbox"></span>
+                    </div>
+                    <div>
+                        <span><label>Subject</label></span>
+                        <span><textarea name="userMsg"> </textarea></span>
+                    </div>
+                    <div>
+                        <span><input type="submit" class="" value="Submit us"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 </div>
 <!-- footer_top -->
 <div class="footer_top">
@@ -231,7 +262,7 @@
         <!-- start span_of_2 -->
         <div class="span_of_2">
             <div class="span1_of_2">
-                <h5>需要帮助? <a href="#">联系我 <span> ></span> </a> </h5>
+                <h5>需要帮助? <a href="#">联系我 <span> ></span> </a></h5>
                 <p>手机:13286116949</p>
             </div>
             <div class="span1_of_2">
@@ -252,11 +283,12 @@
 </div>
 <!-- footer -->
 <div class="footer">
-	<div class="container">
-		<div class="copy">
-			<p class="link">&copy; All rights reserved | Design by MrGoove; <a href="sphinx12252@hotmail.com">联系我</a></p>
-		</div>
-	</div>
+    <div class="container">
+        <div class="copy">
+            <p class="link">&copy; All rights reserved | Design by MrGoove; <a href="sphinx12252@hotmail.com">联系我</a>
+            </p>
+        </div>
+    </div>
 </div>
 </body>
 </html>
