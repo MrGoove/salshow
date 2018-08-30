@@ -11,7 +11,8 @@ password varchar(100),
 address varchar(500),
 gender int ,
 photo varchar(200),
-buyamount int default 0 
+buyamount int default 0 ,
+authorize varchar(50)
 );
 
 insert into tb_user(FName,LName,Email,password,address,gender)
@@ -38,7 +39,8 @@ catogory int,
 style int,
 brand int,
 color int,
-discount int default 0
+discount int default 0,
+store int
 );
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
@@ -47,7 +49,7 @@ values('00001','/resources/images/goods/00001/00001.jpg',
 '/resources/images/goods/00001/00002.jpg','/resources/images/goods/00001/00003.jpg','/resources/images/goods/00001/00004.jpg',
 '/resources/images/goods/00001/00005.png','this is 00001 description',
 'this is a description details',
-132,2,2,2,2);
+132,2,2,2,2,100);
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
 
@@ -55,7 +57,7 @@ values('2000','/resources/images/goods/2002/2001.jpg',
 '/resources/images/goods/2002/2002.jpg','/resources/images/goods/2002/2003.jpg','/resources/images/goods/2002/2004.jpg',
 '/resources/images/goods/2002/2005.jpg','this is 00001 description',
 'this is a description details',
-132,2,2,2,2);
+132,2,2,2,2,100);
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
 
@@ -63,7 +65,7 @@ values('3000','/resources/images/goods/3000/3001.jpg',
 '/resources/images/goods/3000/3002.jpg','/resources/images/goods/3000/3003.jpg','/resources/images/goods/3000/3004.jpg',
 '/resources/images/goods/3000/3005.jpg','this is 00001 description',
 'this is a description details',
-132,2,2,2,2);
+132,2,2,2,2,100);
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
 
@@ -71,7 +73,7 @@ values('5000','/resources/images/goods/5000/5001.jpg',
 '/resources/images/goods/5000/5002.jpg','/resources/images/goods/5000/5003.jpg','/resources/images/goods/5000/5004.jpg',
 '/resources/images/goods/5000/5005.jpg','this is 00001 description',
 'this is a description details',
-132,2,2,2,2);
+132,2,2,2,2,100);
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
 
@@ -79,7 +81,7 @@ values('6000','/resources/images/goods/6000/6001.jpg',
 '/resources/images/goods/6000/6002.jpg','/resources/images/goods/6000/6003.jpg','/resources/images/goods/6000/6004.jpg',
 '/resources/images/goods/6000/5006.jpg','this is 6000 description',
 'this is a description details',
-132,2,2,2,2);
+132,2,2,2,2,100);
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
 
@@ -87,7 +89,7 @@ values('7000','/resources/images/goods/7000/7001.jpg',
 '/resources/images/goods/7000/7002.jpg','/resources/images/goods/7000/7003.jpg','/resources/images/goods/7000/7004.jpg',
 '/resources/images/goods/7000/7005.jpg','this is 7000 description',
 'this is a description details',
-132,2,2,2,2);
+132,2,2,2,2,100);
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
 
@@ -95,7 +97,7 @@ values('8000','/resources/images/goods/8000/8001.jpg',
 '/resources/images/goods/8000/8002.jpg','/resources/images/goods/8000/8003.jpg','/resources/images/goods/8000/8004.jpg',
 '/resources/images/goods/8000/8005.jpg','this is 8000 description',
 'this is a description details',
-132,2,2,2,2);
+132,2,2,2,2,100);
 
 insert into  tb_goods (goods_name,photo_main,photo_1,photo_2,photo_3,photo_4,description_brief,description_details,price,catogory,style,brand,color)
 
