@@ -156,9 +156,8 @@
 	<!-- start registration -->
 	<div class="registration">
 		<div class="registration_left">
-		<h2>new user? <span> create a shoppe account </span></h2>
-		<a href="#"><div class="reg_fb"><img src="${pageContext.request.contextPath}/resources/images/facebook.png" alt=""><i>register using Facebook</i><div class="clearfix"></div></div></a>
-		<!-- [if IE] 
+		<h2>新顾客? <span> 请注册 </span></h2>
+		<!-- [if IE]
 		    < link rel='stylesheet' type='text/css' href='ie.css'/>  
 		 [endif] -->  
 		  
@@ -208,74 +207,74 @@
 			<form id="registration_form" action="${pageContext.request.contextPath}/User/regist" method="post">
 				<div>
 					<label>
-						<input name="FName" placeholder="first name:" type="text" tabindex="1" required autofocus>
+						<input name="FName" placeholder="姓:" type="text" tabindex="1" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input name="LName" placeholder="last name:" type="text" tabindex="2" required autofocus>
+						<input name="LName" placeholder="名:" type="text" tabindex="2" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input name="Email" placeholder="email address:" type="email" tabindex="3" required>
+						<input name="Email" placeholder="邮箱:" type="email" tabindex="3" required>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input name="Address" placeholder="address:" type="text" tabindex="4" required>
+						<input name="Address" placeholder="地址:" type="text" tabindex="4" required>
 					</label>
 				</div>
 				<div class="sky-form">
 					<div class="sky_form1">
 						<ul>
-							<li><label class="radio left"><input type="radio" name="radio" checked=""><i></i>Male</label></li>
-							<li><label class="radio"><input type="radio" name="radio"><i></i>Female</label></li>
+							<li><label class="radio left"><input type="radio" name="radio" checked=""><i></i>男生</label></li>
+							<li><label class="radio"><input type="radio" name="radio"><i></i>女生</label></li>
 							<div class="clearfix"></div>
 						</ul>
 					</div>
 				</div>
 				<div>
 					<label>
-						<input name="password" placeholder="password" type="password" tabindex="5" required>
+						<input name="password" placeholder="密码" type="password" tabindex="5" required>
 					</label>
 				</div>						
 				<div>
 					<label>
-						<input placeholder="retype password" type="password" tabindex="5" required>
+						<input placeholder="确认密码" type="password" tabindex="5" required>
 					</label>
 				</div>	
 				<div>
-					<input type="submit" value="create an account" id="register-submit">
+					<input type="submit" value="注册" id="register-submit">
 				</div>
 				<div class="sky-form">
-					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>i agree to shoppe.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
+					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>我同意shoppe.cn的&nbsp;<a class="terms" href="#">服务协议</a> </label>
 				</div>
 			</form>
 			<!-- /Form -->
 		</div>
 	</div>
 	<div class="registration_left">
-		<h2>existing user</h2>
-		<a href="#"><div class="reg_fb"><img src="images/facebook.png" alt=""><i>sign in using Facebook</i><div class="clear"></div></div></a>
+		<h2></h2>
 		 <div class="registration_form">
+			 <h2> <span> 急速注册 </span></h2>
 		 <!-- Form -->
 			<form id="registration_form" action="${pageContext.request.contextPath}/User/regist" method="post">
 				<div>
 					<label>
-						<input placeholder="email:" type="email" tabindex="3" required>
+						<input name="Email" placeholder="邮箱:" type="email" tabindex="3" required>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="password" type="password" tabindex="4" required>
+						<input name="password" placeholder="密码" type="password" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
-					<input type="submit" value="sign in" id="register-submit">
+					<input type="submit" value="注册" id="register-submit">
 				</div>
 				<div class="forget">
-					<a href="#">forgot your password</a>
+					<a href="#">忘记密码</a>
 				</div>
 			</form>
 			<!-- /Form -->

@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface GoodsService {
     List<Goods> getGoodsList(Goods goods);
-    Goods getGoods(String goods_name);
+    Goods getGoods(Goods goods);
     int saveGoods(Goods goods, HttpServletRequest request) throws IOException;
 }

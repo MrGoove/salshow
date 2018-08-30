@@ -18,6 +18,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/megamenu.js"></script>
     <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
     <script src="${pageContext.request.contextPath}/resources/js/menu_jquery.js"></script>
+    <script src="/resources/js/jquery.uploadifive.min.js"></script>
 </head>
 <body>
 <!-- header_top -->
@@ -165,7 +166,10 @@
                 <!-- [if lt IE 7]>
                     < link rel='stylesheet' type='text/css' href='ie6.css'/>
                 <! [endif] -->
+
+
                 <script>
+
                     (function() {
 
                         // Create input element for testing
@@ -202,10 +206,24 @@
                         }
 
                     })();
+
+                    $('#file_upload').uploadifive({
+                        'uploadScript':'${request.getSession().getServletContext().getRealPath("/")} +"resources/images/goods/"',
+                        'buttonText':'选择文件',
+                        'multi':true,
+                        'auto':false,
+                        'fileObjName': 'filedata', //后台接收file参数
+                        'onUploadComplete':function(file, data) {//每一个文件上传完毕时执行
+                            comsole.log(file.name);
+                        },
+                        'onQueueComplete':function(uploads) {//所有文件上传完毕时执行
+                            comsole.log(uploads.successful);
+                        }
+                    });
                 </script>
                 <div class="registration_form">
                     <!-- Form -->
-                    <form id="registration_form" action="${pageContext.request.contextPath}/goods/addGoods" method="post" enctype="multipart/form-data">
+                    <form id="registration_form" action="${pageContext.request.contextPath}/goods/goodsMamage" method="post" enctype="multipart/form-data">
                         <div>
                             <label>
                                 <input name="goods_name" placeholder="商品名称" type="text"/>
@@ -213,6 +231,9 @@
                         </div>
                         <div>
                                 上传主页面照片<input name="main_photo" type="file"/>
+                        </div>
+                        <div>
+                                上传详情图片（最多4张) <input type="file" id="file_upload">
                         </div>
                         <div>
                             <label>
@@ -231,12 +252,12 @@
                         </div>--%>
                         <div>
                             <label>
-                                尺寸: <br/>
-                                1&nbsp;<input name="size" type="radio" value="1">&nbsp;&nbsp;
-                                2&nbsp;<input name="size" type="radio" value="2">&nbsp;&nbsp;
-                                3&nbsp;<input name="size" type="radio" value="3">&nbsp;&nbsp;
-                                4&nbsp;<input name="size" type="radio" value="4">&nbsp;&nbsp;
-                                5&nbsp;<input name="size" type="radio" value="5">
+                                类型: <br/>
+                                女性用品&nbsp;<input name="goods_type" type="radio" value="1">&nbsp;&nbsp;
+                                男性用品&nbsp;<input name="goods_type" type="radio" value="2">&nbsp;&nbsp;
+                                儿童用品&nbsp;<input name="goods_type" type="radio" value="3">&nbsp;&nbsp;
+                                装饰品&nbsp;<input name="goods_type" type="radio" value="4">&nbsp;&nbsp;
+                                包包皮具&nbsp;<input name="goods_type" type="radio" value="5">
                             </label>
                         </div>
 

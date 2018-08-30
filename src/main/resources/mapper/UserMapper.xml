@@ -8,7 +8,7 @@
         SELECT * FROM tb_user WHERE Email = #{Email}
     </select>
     <insert id="SaveUser" parameterType="com.salshow.entity.User">
-        insert into tb_user (FName,LName,Email,address,password,gender,buyamount,authorize)
-        VALUES (#{FName},#{LName},#{Email},#{address},#{password},#{gender},#{buyamount},#{authorize})
+        insert into tb_user (FName,LName,Email,address,password,gender,buyamount,authorize,createtime)
+        VALUES (#{FName},#{LName},#{Email},#{address},#{password},#{gender},#{buyamount},#{authorize},#{createtime})
     </insert>
 </mapper>

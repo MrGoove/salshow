@@ -155,21 +155,21 @@
 <div class="container">
 	<div class="main">
 		<div class="shoping_bag">
-			<h4><img src="${pageContext.request.contextPath}/resources/images/bag1.png">我的购物袋 / <span> 11 件商品</span></h4>
+			<h4><img src="${pageContext.request.contextPath}/resources/images/bag1.png">我的购物袋 / <span> </span></h4>
 			<ul class="s_art">
 				<li><img src="${pageContext.request.contextPath}/resources/images/art1.png"></li>
-				<li><span> 11 件商品</span></li>
+				<li><span></span></li>
 			</ul>
 			<div class="clearfix"></div>
 		</div>
 		<div class="shoping_bag1">
 			<div class="shoping_left">
 				<div class="shoping1_of_1">
-					<img src="${pageContext.request.contextPath}/resources/images/w3.jpg"  class="img-responsive" alt="" />
+					<img src="${goods.photomain}"  class="img-responsive" alt="" />
 				</div>
 				<div class="shoping1_of_2">
-					<h4><a href="#">shakumbhari women black kurtas</a> </h4>
-					<span>size <b>xl</b>&nbsp;&nbsp; qty <b>1</b> | code :1175</span>
+					<h4><a href="#">${goods.goodsname}</a> </h4>
+					<span>尺寸 <b>xl</b>&nbsp;&nbsp; qty <b>1</b> | code :1175</span>
 					<ul class="s_icons">
 						<li><a href="#"><img src="${pageContext.request.contextPath}/resources/images/s_icon1.png" alt=""></a></li>
 						<li><a href="#"><img src="${pageContext.request.contextPath}/resources/images/s_icon2.png" alt=""></a></li>
@@ -179,18 +179,18 @@
 				<div class="clearfix"></div>
 			</div>
 			<div class="shoping_right">
-				<p>35% off &nbsp;<span> Rs. 1,899</span></p>
+				<p>35% off &nbsp;<span> RMB ${goods.price}</span></p>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="shoping_bag1">
 			<div class="shoping_left">
-				<h2><a href="#"><img src="${pageContext.request.contextPath}/resources/images/gift.jpg">gift wrap </a> <span> for rs. 25</span></h2>
+				<h2><a href="#"><img src="${pageContext.request.contextPath}/resources/images/gift.jpg">礼品包装 </a> <span> for rs. 25</span></h2>
 			</div>
 			<div class="shoping_right">
-				<p>sub total &nbsp;<span> Rs. 1,899</span></p>
-				<p>vat collected &nbsp;<span> Rs. 91</span></p>
-				<p>delivery &nbsp;<a href="#">free</a>&nbsp;<span> Rs. 0</span></p>
+				<p>小计 &nbsp;<span> RMB ${goods.price}</span></p>
+				<p>增值税 &nbsp;<span> Rs. ${goods.price/20}</span></p>
+				<p>运费 &nbsp;<a href="#">free</a>&nbsp;<span> Rs. 0</span></p>
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -199,16 +199,16 @@
 				<h2><a href="#"><img src="${pageContext.request.contextPath}/resources/images/login.jpg">login </a> <span> to apply coupons</span></h2>
 			</div>
 			<div class="shoping_right">
-				<p>coupon discount &nbsp;<span class="color"> Rs. 0</span></p>
+				<p>优惠券 &nbsp;<span class="color"> Rs. 0</span></p>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="shoping_bag2">
 			<div class="shoping_left">
-				<a class="btn1" href="details.html">place order</a>
+				<a class="btn1" href="${pageContext.request.contextPath}/goods/ConfirmBuy">点击购买</a>
 			</div>
 			<div class="shoping_right">
-				<p class="tot">total &nbsp;<span class="color"> Rs. 2,109</span></p>
+				<p class="tot">合计 &nbsp;<span class="color"> ${goods.price+goods.price/20}</span></p>
 			</div>
 			<div class="clearfix"></div>
 		</div>

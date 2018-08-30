@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import redis.clients.jedis.Jedis;
 import redis.clients.util.JedisURIHelper;
+import sun.util.calendar.BaseCalendar;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -27,6 +28,8 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/User")
@@ -50,8 +53,8 @@ public class UserController {
             try{
                 currentUser.login(token);
                 httpSession.setAttribute("userName", token.getUsername());
-                model.addAttribute("loginCount",redis.get(token.getUsername()));
-                redis.close();
+                String logTime = redis.get(token.getUsername())!=null? ",您的登陆次数为" +redis.get(token.getUsername()):"";
+                model.addAttribute("loginCount",logTime);
                 return  "index";
             }catch (Exception e){
                 e.printStackTrace();
@@ -72,11 +75,13 @@ public class UserController {
         user.address = request.getParameter("Address");
         user.buyamount =0;
         user.authorize="user";
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        user.createtime= sf.format(new Date());
         userService.SaveUser(user);
         httpSession.setAttribute("userName",user.Email);
         model.addAttribute("loginCount","1");
         redis.set(user.Email,"1");
-        redis.close();
+        /*redis.close();*/
         return "index";
     }
 

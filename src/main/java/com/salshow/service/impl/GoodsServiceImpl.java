@@ -30,8 +30,8 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
-    public Goods getGoods(String goods_name) {
-        return goodsDao.getGoods(goods_name);
+    public Goods getGoods(Goods goods) {
+        return goodsDao.getGoods(goods);
     }
 
     @Override
@@ -47,14 +47,16 @@ public class GoodsServiceImpl implements GoodsService {
             while(iter.hasNext()){
                 MultipartFile file = multiRequest.getFile(iter.next().toString());
                 if(file != null){
-                    FilePath = "/resources/images/goods/9000/" +file.getOriginalFilename();
+                    FilePath = request.getSession().getServletContext().getRealPath("/") +"resources/images/goods/"+file.getOriginalFilename();
 
-                    file.transferTo(new File("C:\\Users\\sphinx12252\\Documents\\GitHub\\salshow\\src\\main\\webapp\\"+FilePath));
+                    /*FilePath = "/url/local/images/" +file.getOriginalFilename();*/
+
+                    file.transferTo(new File(FilePath));
+                    goods.photomain ="/resources/images/goods/"+file.getOriginalFilename();
                 }
             }
         }
 
-        goods.photomain =FilePath;
 
         return goodsDao.SaveGoods(goods);
     }

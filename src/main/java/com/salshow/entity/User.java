@@ -1,6 +1,7 @@
 package com.salshow.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class User implements Serializable {
     public int id;
@@ -13,6 +14,15 @@ public class User implements Serializable {
     public String photo;
     public int buyamount;
     public String authorize;
+    public String createtime;
+
+    public String getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(String createtime) {
+        this.createtime = createtime;
+    }
 
     public String getAuthorize() {
         return authorize;

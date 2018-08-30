@@ -27,8 +27,10 @@ public class test extends BaseTest {
     @Test
     public void testQueryGoods() throws  Exception{
         String goods_name = "9000";
-        Goods goods = goodsDao.getGoods(goods_name);
-        System.out.println(goods);
+        Goods goods =new Goods();
+        goods.goodsname="9000";
+        Goods resultGoods = goodsDao.getGoods(goods);
+        System.out.println(resultGoods);
     }
 
 

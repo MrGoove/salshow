@@ -36,12 +36,12 @@
 			<div class="top_right">
 				<ul>
 					<li><a href="#">最近浏览</a></li>|
-					<li><a href="contact.html">联系我(linux test)</a></li>|
+					<li><a href="contact.html">联系我</a></li>|
 						<%
 				String userName = (String)session.getAttribute("userName");
 			if(userName != null){
 			%>
-					<li><a href="#">${sessionScope.userName},欢迎,您的登陆次数为:${loginCount}</a></li>|
+					<li><a href="#">${sessionScope.userName}${loginCount}</a></li>|
 					<li class="login" >
 						<div id="logoutD">
 							<form id="logoutForm" action="${pageContext.request.contextPath}/User/logout" method="POST">
@@ -95,7 +95,7 @@
 					<a class="arrow"  href="${pageContext.request.contextPath}/registration">创建账号<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
 
 					<%} else{%>
-					<a class="arrow"  href="${pageContext.request.contextPath}/goods/goodsManage">管理商品<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
+					<a class="arrow"  href="${pageContext.request.contextPath}/goods/addGoods">管理商品<img src="${pageContext.request.contextPath}/resources/images/right_arrow.png" alt=""/>  </a>
 					<%}%>
 				</div>
 				<ul class="icon1 sub-icon1 profile_img">

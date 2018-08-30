@@ -30,8 +30,16 @@ public class GoodsController {
     @RequestMapping("/goods")
     public String getGoods(ServletRequest request, Model model){
         String goodsName = request.getParameter("goodsName");
-        Goods goods = goodsService.getGoods(goodsName);
-        model.addAttribute("goods",goods);
+        String id = request.getParameter("id");
+        Goods goods = new Goods();
+        if(goodsName !=null){
+            goods.goodsname =goodsName;
+        }
+        if(id!=null){
+            goods.id=Integer.parseInt(id);
+        }
+        Goods resutlGoods = goodsService.getGoods(goods);
+        model.addAttribute("goods",resutlGoods);
         return "details";
     }
 
@@ -46,12 +54,12 @@ public class GoodsController {
             return "woman";
     }
 
-    @RequestMapping("/goodsManage")
-    public String goodsManage(){
-        return "goodsManage";
-    }
-
     @RequestMapping("/addGoods")
+        public String addGoods(){
+        return "goodsManage";
+        }
+
+    @RequestMapping("/goodsMamage")
     public String goodsManage(HttpServletRequest request) throws IllegalStateException,IOException{
         Goods goods = new Goods();
         goods.goodsname = request.getParameter("goods_name");
@@ -59,7 +67,30 @@ public class GoodsController {
         goods.descriptiondetails =request.getParameter("desc_details");
         goods.price =Integer.parseInt(request.getParameter("price"));
         goods.sizes = request.getParameter("size");
+        goods.catogory =Integer.parseInt(request.getParameter("goods_type"));
         goodsService.saveGoods(goods,request);
-        return "goodsMamage";
+        return "goodsManage";
     }
+
+    @RequestMapping("/buy")
+    public String buy(HttpServletRequest request,Model model){
+        String id = request.getParameter("id");
+        if(id!=null&&id!="") {
+            Goods goods = new Goods();
+            goods.id = Integer.parseInt(id);
+            Goods resultGoods = goodsService.getGoods(goods);
+            if (resultGoods != null) {
+                model.addAttribute("goods", resultGoods);
+                return "buy";
+            }
+        }
+        return "index";
+    }
+
+    @RequestMapping("/ConfirmBuy")
+    public String confirmBuy(){
+
+        return "orderSuccess";
+    }
+
 }

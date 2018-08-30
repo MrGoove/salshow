@@ -224,9 +224,9 @@
 				  </div>
 				  <div class="desc1 span_3_of_2">
 					<h3>${goods.goodsname}</h3>
-					<p>${goods.price}<a href="#">click for offer</a></p>
+					<p>${goods.price}</p>
 					<div class="det_nav">
-						<h4>related styles :</h4>
+						<h4>类似产品 :</h4>
 						<ul>
 							<li><a href="#"><img src="${pageContext.request.contextPath}/resources/images/w6.jpg" class="img-responsive" alt=""/></a></li>
 							<li><a href="#"><img src="${pageContext.request.contextPath}/resources/images/w8.jpg" class="img-responsive" alt=""/></a></li>
@@ -235,7 +235,7 @@
 						</ul>
 					</div>
 					<div class="det_nav1">
-						<h4>Select a size :</h4>
+						<h4>选择尺寸 :</h4>
 							<div class=" sky-form col col-4">
 								<ul>
 									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>L</label></li>
@@ -246,7 +246,7 @@
 							</div>
 					</div>
 					<div class="btn_form">
-						<a href="${pageContext.request.contextPath}/buy">buy</a>
+						<a href="${pageContext.request.contextPath}/goods/buy?id=${goods.id}">购买</a>
 					</div>
 					<a href="#"><span>login to save in wishlist </span></a>
 

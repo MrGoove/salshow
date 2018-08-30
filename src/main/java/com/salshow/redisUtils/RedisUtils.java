@@ -7,7 +7,7 @@ import redis.clients.jedis.JedisPoolConfig;
 public class RedisUtils {
     private RedisUtils(){}
 
-    private static String IP = "192.168.0.103";
+    private static String IP = "127.0.0.1";
 
     private static int  port = 6379;
 
