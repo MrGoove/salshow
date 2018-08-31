@@ -99,17 +99,18 @@ public class GoodsController {
 
     @RequestMapping("/ConfirmBuy")
     public String confirmBuy(HttpServletRequest request){
-        Goods goods = new Goods();
-        goods.id =Integer.parseInt( request.getParameter("id"));
-        Goods resultGoods = goodsService.getGoods(goods);
+
         Lock lock = new ReentrantLock();
         try{
             lock.lock();
+            Goods goods = new Goods();
+            goods.id =Integer.parseInt( request.getParameter("id"));
+            Goods resultGoods = goodsService.getGoods(goods);
             resultGoods.store = resultGoods.store-1;
+            goodsService.updateGoods(resultGoods);
         }finally {
             lock.unlock();
         }
-        goodsService.updateGoods(resultGoods);
         return "orderSuccess";
     }
 
