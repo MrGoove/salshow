@@ -156,7 +156,7 @@
                                             <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=3">装饰</a>
                                         </li>
                                         <li>
-                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=4">童装</a>
+                                            <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=4">皮具/包包</a>
                                         </li>
                                         <li>
                                             <a href="${pageContext.request.contextPath}/goods/goodsList?catogory=5">品牌</a>

@@ -2,6 +2,7 @@ package com.salshow.controller;
 
 import com.salshow.dao.GoodsDao;
 import com.salshow.entity.Goods;
+import com.salshow.redisUtils.RedisUtils;
 import com.salshow.service.GoodsService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+import redis.clients.jedis.Jedis;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
@@ -19,10 +21,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Controller
 @RequestMapping("/goods")
 public class GoodsController {
+
+    Jedis redis = RedisUtils.getJedis();
 
     @Autowired
     private GoodsService goodsService;
@@ -38,6 +44,9 @@ public class GoodsController {
         if(id!=null){
             goods.id=Integer.parseInt(id);
         }
+        redis.hexists("goods",String.valueOf(goods.id));
+        redis.hincrBy("goods",String.valueOf(goods.id),1);
+
         Goods resutlGoods = goodsService.getGoods(goods);
         model.addAttribute("goods",resutlGoods);
         return "details";
@@ -93,7 +102,13 @@ public class GoodsController {
         Goods goods = new Goods();
         goods.id =Integer.parseInt( request.getParameter("id"));
         Goods resultGoods = goodsService.getGoods(goods);
-        resultGoods.store = resultGoods.store-1;
+        Lock lock = new ReentrantLock();
+        try{
+            lock.lock();
+            resultGoods.store = resultGoods.store-1;
+        }finally {
+            lock.unlock();
+        }
         goodsService.updateGoods(resultGoods);
         return "orderSuccess";
     }
